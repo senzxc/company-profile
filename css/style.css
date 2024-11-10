@@ -111,7 +111,7 @@ nav ul li {
     color: var(--white);
     padding: 30px 50px;
     border-radius: 20px;
-    margin-top: 3rem;
+    margin-top: 2rem;
 }
 
 .page-2 .data-flex .card-about h2 {
@@ -125,5 +125,23 @@ nav ul li {
 
 .page-2 .short-title {
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
+    width: 100%;
+    margin-top: 2rem;
+}
+
+.page-2 .short-title p {
+    text-align: center;
+    width: 40%;
+}
+
+.page-2 .short-title .short-btn {
+    margin-top: 2em;
+    font-size: 1.5em;
+}
+
+.page-2 .short-title button {
+    width: 100%;
 }
