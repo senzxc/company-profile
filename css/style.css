@@ -145,3 +145,54 @@ nav ul li {
 .page-2 .short-title button {
     width: 100%;
 }
+
+.page-3 {
+    margin-top: 3rem;
+}
+
+.page-3 .artic-3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.page-3 .artic-3 h1 {
+    font-size: 3em;
+    margin: 0;
+}
+
+.page-3 .artic-3 p {
+    width: 70%;
+    margin-top: 2em;
+    text-align: center;
+}
+
+.page-3 .trio-icon {
+    display: flex;
+    justify-content: center;
+    gap: 5em;
+    margin-top: 2em;
+}
+
+.page-3 .trio-icon .trio-btn {
+    all: unset;
+    border: 1px solid #000;
+    padding: 5em;
+    border-radius: 500px;
+}
+
+.page-3 .trio-icon .trio-btn img{
+    width: 150px;
+}
+
+.page-3 .trio-icon .trio-a {
+    margin-top: 5em;
+    border: 1px solid #000;
+    border-radius: 500px;
+    padding: 5em;
+}
+
+.page-3 .trio-icon .trio-a img {
+    width: 150px;
+}
