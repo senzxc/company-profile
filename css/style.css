@@ -49,6 +49,7 @@ main {
     width: 100%;
     justify-content: center;
     margin-top: 10px;
+    z-index: 1;
 }
 
 .slide1 nav .wrapper-nav {
@@ -56,16 +57,20 @@ main {
     height: 50px;
     align-items: center;
     justify-content: space-evenly;
+    box-shadow: 0 10px 20px 0 #4444441e;
     background-color: #fff;
     border-radius: 50px;
-    padding: 0 30px;
-    gap: 5vw;
-    box-shadow: 0 5px 30px 0 #4444441c;
+    padding-right: 30px;
+    gap: 3vw;
+    overflow: hidden;
 }
 
 .slide1 nav .wrapper-nav h2 {
     display: flex;
-    color: #333;
+    color: #eee;
+    background-color: #333;
+    padding: 10px 40px;
+    border-radius: 50px;
 }
 
 .slide1 nav .wrapper-nav ul{
@@ -152,10 +157,12 @@ main {
 }
 
 .slide2 article .box-wrapper .box {
+    display: flex;
+    flex-direction: column;
     text-align: center;
     background: #333;
     border-radius: 20px;
-    padding: 40px 30px;
+    padding: 60px 70px;
     color: #eee;
 }
 
@@ -210,8 +217,9 @@ main {
     background-color: #fff;
     border-radius: 20px;
     overflow: hidden;
-    flex: 0 1 calc(44.444% - 40px);
     box-sizing: border-box;
+    flex: 0 1 calc(44.444% - 40px);
+    box-shadow: 0 10px 10px 0 #33333318;
 }
 
 .slide3 article .img-wrapper .img-box .img-header {
@@ -260,7 +268,66 @@ main {
 /*---------------------- SLIDE 4 START ----------------------*/
 
 .slide4 {
-    background: linear-gradient(454deg, #98dfa4, #88d6e0);
+    /* background: linear-gradient(454deg, #98dfa4, #88d6e0); */
+    display: flex;
+    align-items: flex-end;
 }
+
+.slide4 footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 45vw;
+    background-color: #333;
+    border-radius: 250px 250px 0 0;
+    gap: 4vw;
+}
+
+.slide4 footer .img-footer {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.slide4 footer .img-footer img {
+    width: 95%;
+}
+
+.slide4 footer .text-footer {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.slide4 footer .text-footer h1 {
+    font-size: 5em;
+    line-height: 1.1em;
+    max-width: 50%;
+    margin-bottom: 30px;
+}
+
+.slide4 footer .text-footer p {
+    margin-bottom: 30px;
+}
+
+.slide4 footer .text-footer .social-icon {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.slide4 footer .text-footer .social-icon .social-btn {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    padding: 10px 20px;
+    border-radius: 50px;
+    color: #333;
+    text-decoration: none;
+    gap: 10px;
+}
+
 
 /*---------------------- SLIDE 4 END ----------------------*/
