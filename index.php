@@ -1,3 +1,11 @@
+<?php
+    require 'functions.php';
+
+    $sql = "SELECT * FROM gallery";
+    $all_img = $conn->query($sql);
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -66,22 +74,30 @@
             <article>
                 <h1>Gallery Biji</h1>
 
+                <?php
+                    while ($row = mysqli_fetch_assoc($all_img)) {     
+                ?>
+
                 <div class="img-wrapper">
                     <div class="img-box">
                         <div class="img-header">
-                            <img class="img1" src="assets/gallery-1.png" alt="gallery-1.png">
+                            <img class="img1" src="<?= $row["img"]; ?>" alt="gallery-1.png">
 
                             <div class="img-date">
-                                <p>Nov 01, 2021</p>
+                                <p><?= $row["date"]; ?></p>
                             </div>
                         </div>
                         
                         <div class="parag-footer">
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam, quaerat!</p>
+                            <p><?= $row["description"]; ?></p>
                         </div>
                     </div>
 
-                    <div class="img-box">
+                    <?php
+                        }
+                    ?>
+
+                    <!-- <div class="img-box">
                         <div class="img-header">
                             <img class="img2" src="assets/gallery-2.png" alt="gallery-2.png">
 
@@ -120,7 +136,7 @@
                         <div class="parag-footer">
                             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam, quaerat!</p>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </article>
         </section>
@@ -142,7 +158,7 @@
                         <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="24" cy="24" r="24" fill="white"></circle><path d="M35.4937 18.498C35.3571 18.0147 35.0897 17.5741 34.7181 17.2203C34.3466 16.8664 33.884 16.6117 33.3766 16.4816C31.5082 16 24 16 24 16C24 16 16.4918 16 14.6234 16.4816C14.116 16.6117 13.6534 16.8664 13.2819 17.2203C12.9103 17.5741 12.6429 18.0147 12.5063 18.498C12.1574 20.3129 11.9881 22.155 12.0006 24C11.9881 25.845 12.1574 27.6871 12.5063 29.502C12.6429 29.9853 12.9103 30.4259 13.2819 30.7797C13.6534 31.1336 14.116 31.3883 14.6234 31.5184C16.4918 32 24 32 24 32C24 32 31.5082 32 33.3766 31.5184C33.884 31.3883 34.3466 31.1336 34.7181 30.7797C35.0897 30.4259 35.3571 29.9853 35.4937 29.502C35.8426 27.6871 36.0119 25.845 35.9994 24C36.0119 22.155 35.8426 20.3129 35.4937 18.498ZM21.6001 27.4286V20.5714L27.8312 24L21.6001 27.4286Z" fill="#333"></path></svg>
                         <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="24" cy="24" r="24" fill="white"></circle><path d="M19.8856 30.8571H16.457V20.5714H19.8856V30.8571ZM18.172 19.2C17.2237 19.2 16.457 18.4313 16.457 17.485C16.457 16.5387 17.225 15.7714 18.172 15.7714C19.1169 15.7714 19.8856 16.5401 19.8856 17.485C19.8856 18.4313 19.1169 19.2 18.172 19.2ZM32.2285 30.8571H28.9322V25.8514C28.9322 24.6576 28.9096 23.1223 27.2186 23.1223C25.5023 23.1223 25.2383 24.4224 25.2383 25.765V30.8571H21.9427V20.5639H25.1066V21.9703H25.1512C25.5914 21.1611 26.6673 20.3081 28.2719 20.3081C31.6113 20.3081 32.2285 22.44 32.2285 25.2117V30.8571Z" fill="#333"></path></svg>
 
-                        <a class="social-btn" href="contact.html">
+                        <a class="social-btn" href="contact.php">
                             <span>Contact Us</span> 
                             <svg width="11" height="16" viewBox="0 0 11 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3.06145 15.061L10.1215 8L3.06145 0.938995L0.939453 3.061L5.87945 8L0.939453 12.939L3.06145 15.061Z" fill="#333"></path></svg>
                         </a>

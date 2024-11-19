@@ -1,3 +1,18 @@
+<?php
+    require 'functions.php';
+
+    if (isset($_POST['submit'])) {
+        if (contact($_POST) > 0) {
+            echo "<script>
+                    alert('Berhasil mengirim Pesan.');
+                </script>";
+        } else {
+            echo mysqli_error($conn);
+        }
+    }
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,7 +35,7 @@
             <form action="" method="POST">
                 <div class="form-group name">
                     <label for="Nama">Nama</label>
-                    <input type="text" name="nama" id="Nama" placeholder="Ketikkan Nama Anda">
+                    <input type="text" name="name" id="Nama" placeholder="Ketikkan Nama Anda">
                 </div>
 
                 <div class="form-group email">
@@ -30,12 +45,12 @@
 
                 <div class="form-group msg">
                     <label for="Pesan">Pesan</label>
-                    <textarea name="pesan" id="Pesan" placeholder="Ketikkan Pesan Anda"></textarea>
+                    <textarea name="message" id="Pesan" placeholder="Ketikkan Pesan Anda"></textarea>
                 </div>
 
                 <div class="form-btn">
-                    <button class="delete">Hapus</button>
-                    <button class="submit">Kirim</button>
+                    <button type="reset" class="delete">Hapus</button>
+                    <button type="submit" name="submit" class="submit">Kirim</button>
                 </div>
             </form>
         </section>
