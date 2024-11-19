@@ -291,7 +291,7 @@ main {
 }
 
 .slide4 footer .img-footer img {
-    width: 95%;
+    width: 90%;
 }
 
 .slide4 footer .text-footer {
@@ -315,6 +315,7 @@ main {
 .slide4 footer .text-footer .social-icon {
     display: flex;
     align-items: center;
+    margin-bottom: 30px;
     gap: 10px;
 }
 
@@ -324,8 +325,9 @@ main {
     background-color: #fff;
     padding: 10px 20px;
     border-radius: 50px;
-    color: #333;
     text-decoration: none;
+    margin-left: 20px;
+    color: #333;
     gap: 10px;
 }
 
