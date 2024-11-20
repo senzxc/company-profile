@@ -53,6 +53,8 @@
                     <button type="submit" name="submit" class="submit">Kirim</button>
                 </div>
             </form>
+
+            <a href="index.php">&#129104; &nbsp; Kembali</a>
         </section>
     </main>
 </body>
