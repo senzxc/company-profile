@@ -11,7 +11,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Biji</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -25,6 +25,11 @@
                         <li><a href="#about">About</a></li>
                         <li><a href="#gallery">Gallery</a></li>
                         <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="wrapper-nav2">
+                    <ul>
+                        <li><a href="login.php">Login</a></li>
                     </ul>
                 </div>
             </nav>
@@ -41,7 +46,7 @@
 
         <section class="slides slide2" id="about">
             <article>
-                <h1>About Biji</h1>
+                <h1>Sekilas Biji</h1>
                 <h3>1990</h3>
                 <p>› Biji didirikan di Jakarta dengan nama Biji International Inc. ‹</p>
                 <p>› Diawali sebagai perusahaan perdagangan umum. ‹</p>
@@ -72,13 +77,14 @@
 
         <section class="slides slide3" id="gallery">
             <article>
-                <h1>Gallery Biji</h1>
+                <h1>Galeri Biji</h1>
+
+                <div class="img-wrapper">
 
                 <?php
                     while ($row = mysqli_fetch_assoc($all_img)) {     
                 ?>
 
-                <div class="img-wrapper">
                     <div class="img-box">
                         <div class="img-header">
                             <img class="img1" src="<?= $row["img"]; ?>" alt="gallery-1.png">
@@ -159,7 +165,7 @@
                         <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="24" cy="24" r="24" fill="white"></circle><path d="M19.8856 30.8571H16.457V20.5714H19.8856V30.8571ZM18.172 19.2C17.2237 19.2 16.457 18.4313 16.457 17.485C16.457 16.5387 17.225 15.7714 18.172 15.7714C19.1169 15.7714 19.8856 16.5401 19.8856 17.485C19.8856 18.4313 19.1169 19.2 18.172 19.2ZM32.2285 30.8571H28.9322V25.8514C28.9322 24.6576 28.9096 23.1223 27.2186 23.1223C25.5023 23.1223 25.2383 24.4224 25.2383 25.765V30.8571H21.9427V20.5639H25.1066V21.9703H25.1512C25.5914 21.1611 26.6673 20.3081 28.2719 20.3081C31.6113 20.3081 32.2285 22.44 32.2285 25.2117V30.8571Z" fill="#333"></path></svg>
 
                         <a class="social-btn" href="contact.php">
-                            <span>Contact Us</span> 
+                            <span>Kontak Kami</span> 
                             <svg width="11" height="16" viewBox="0 0 11 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3.06145 15.061L10.1215 8L3.06145 0.938995L0.939453 3.061L5.87945 8L0.939453 12.939L3.06145 15.061Z" fill="#333"></path></svg>
                         </a>
                     </div>
