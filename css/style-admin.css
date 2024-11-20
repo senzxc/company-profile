@@ -13,20 +13,25 @@
     --gray: #ebeef1;
     --blue: #4b2add;
     --black: #333;
+    --blue-lit-trans: #4b2addad;
+    --blue-trans: #a491fc3f;
 
+}
+
+body {
+    background: var(--gray);
 }
 
 /*---------------------- NAV START ----------------------*/
 
 main {
     display: flex;
-    gap: 5vw;
 }
 
 nav {
     display: flex;
     flex-direction: column;
-    background: var(--gray);
+    background: var(--white);
     padding: 30px;
     height: 100vh;
 }
@@ -72,7 +77,7 @@ nav .menus-wrapper .menu-flex h2 {
     font-weight: 500;
 }
 
-nav .menus-wrapper .home {
+nav .menus-wrapper .dashboard {
     background: var(--blue);
     padding: 15px;
     border-radius: 10px;
@@ -80,7 +85,19 @@ nav .menus-wrapper .home {
     margin-bottom: 30px;
 }
 
-nav .menus-wrapper .home path {
+nav .menus-wrapper .dashboard path {
+    stroke: var(--white);
+}
+
+nav .menus-wrapper .user {
+    background: var(--blue);
+    padding: 15px;
+    border-radius: 10px;
+    color: var(--white);
+    margin-bottom: 30px;
+}
+
+nav .menus-wrapper .user path {
     stroke: var(--white);
 }
 
@@ -88,8 +105,10 @@ nav .logout {
     display: flex;
     align-items: center;
     padding: 0 15px;
-    gap: 0.5vw;
     margin-top: auto;
+    color: var(--black);
+    text-decoration: none;
+    gap: 0.5vw;
 }
 
 nav .logout svg {
@@ -102,3 +121,277 @@ nav .logout h2 {
 }
 
 /*---------------------- NAV END ----------------------*/
+
+/*---------------------- HOME START ----------------------*/
+
+.home {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+}
+
+.home h1 {
+    font-size: 3em;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.home .path {
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+    gap: 25px;
+}
+
+.home .path h2 {
+    font-size: 1.2em;
+    font-weight: 500;
+    color: rgb(146, 146, 146);
+}
+
+.home .path h3 {
+    font-size: 1.2em;
+    font-weight: 500;
+    color: var(--blue);
+}
+
+.home .statistic {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+    gap: 2vw;
+}
+
+.home .statistic .stat-box {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background: var(--white);
+    padding: 30px 50px;
+    border-radius: 10px;
+    gap: 20px;
+}
+
+.home .statistic .stat-box .icon-group svg {
+    width: 35px;
+}
+
+.home .statistic .users .icon-group {
+    background: #a491fc3f;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.home .statistic .users .icon-group path {
+    fill: #4b2addad;
+}
+
+.home .statistic .stat-box h1 {
+    font-size: 2em;
+    font-weight: 600;
+    margin: 0;
+}
+
+.home .statistic .stat-box h2 {
+    font-size: 1.2em;
+    font-weight: 500;
+}
+
+.home .statistic .images .icon-group {
+    background: #fcf59193;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.home .statistic .images .icon-group path {
+    fill: #ddc22aad;
+}
+
+.home .statistic .messages .icon-group {
+    background: #9afc9193;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.home .statistic .messages .icon-group path {
+    fill: #3fdd2aad;
+}
+
+.home .recent-users {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    background: var(--white);
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.home .recent-users h1 {
+    font-size: 2em;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.home .recent-users span {
+    background: var(--blue-lit-trans);
+    padding: 0 15px;
+    border-radius: 7px;
+    color: var(--white);
+}
+
+.home .recent-users .table-user {
+    display: flex;
+    flex-direction: column;
+}
+
+.home .recent-users .box-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #b4b4b4;
+}
+
+.home .recent-users .box-header h2 {
+    font-size: 1.2em;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.home .recent-users .box-header h3 {
+    margin-left: auto;
+    margin-right: 5vw;
+}
+
+
+.home .recent-users .box-user {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.home .recent-users .box-user img {
+    width: 50px;
+    border-radius: 50px;
+    margin-right: 2rem;
+}
+
+.home .recent-users .box-user h3 {
+    font-size: 1.2em;
+    font-weight: 500;
+}
+
+.home .recent-users .box-user h4 {
+    font-size: 1.2em;
+    font-weight: 500;
+    margin-left: auto;
+    margin-right: 5vw;
+}
+
+/*---------------------- HOME END ----------------------*/
+
+/*---------------------- USER START ----------------------*/
+
+.users {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+}
+
+.users h1 {
+    font-size: 3em;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.users .path {
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+    gap: 25px;
+}
+
+.users .path h2 {
+    font-size: 1.2em;
+    font-weight: 500;
+    color: rgb(146, 146, 146);
+}
+
+.users .path h3 {
+    font-size: 1.2em;
+    font-weight: 500;
+    color: var(--blue);
+}
+
+.users .recent-users {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    background: var(--white);
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.users .recent-users h1 {
+    font-size: 2em;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.users .recent-users span {
+    background: var(--blue-lit-trans);
+    padding: 0 15px;
+    border-radius: 7px;
+    color: var(--white);
+}
+
+.users .recent-users .table-user {
+    display: flex;
+    flex-direction: column;
+}
+
+.users .recent-users .box-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #b4b4b4;
+}
+
+.users .recent-users .box-header h2 {
+    font-size: 1.2em;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.users .recent-users .box-header h3 {
+    margin-left: auto;
+    margin-right: 5vw;
+}
+
+
+.users .recent-users .box-user {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.users .recent-users .box-user img {
+    width: 50px;
+    border-radius: 50px;
+    margin-right: 2rem;
+}
+
+.users .recent-users .box-user h3 {
+    font-size: 1.2em;
+    font-weight: 500;
+}
+
+.users .recent-users .box-user h4 {
+    font-size: 1.2em;
+    font-weight: 500;
+    margin-left: auto;
+    margin-right: 5vw;
+}
+
+/*---------------------- USER END ----------------------*/
