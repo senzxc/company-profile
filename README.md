@@ -8,6 +8,17 @@ To build a community website with the following features:
 - Provide a community gallery.  
 - Offer a form for public suggestions/feedback.  
 
+## ✨ Key Features
+1. For Users (Public):
+   - Homepage displaying community events.
+   - Gallery showcasing community activities.
+   - Form to submit suggestions or feedback to the community.
+
+2. For Admins:
+   - Manage admin accounts.
+   - Manage the gallery (add/remove images).
+   - View and respond to user/public messages.
+
 ## 🚀 Installation Guide
 1. Clone this repository using Git:  
    ```bash
@@ -22,18 +33,7 @@ To build a community website with the following features:
 5. Access the website using the following URL:
    http://localhost/company-profile
 
-## ✨ Key Features
-1. For Users (Public):
-   - Homepage displaying community events.
-   - Gallery showcasing community activities.
-   - Form to submit suggestions or feedback to the community.
-
-2. For Admins:
-   - Manage admin accounts.
-   - Manage the gallery (add/remove images).
-   - View and respond to user/public messages.
-
-## 🛠️ Technologies Used
+## 🛠️ Tech Stack
 <img src="https://skillicons.dev/icons?i=html,css,php">
 
 Made with ❤️ by [senzxc](https://github.com/senzxc)
