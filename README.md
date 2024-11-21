@@ -8,11 +8,6 @@ To build a community website with the following features:
 - Provide a community gallery.  
 - Offer a form for public suggestions/feedback.  
 
-## 🛠️ Technologies Used
-- **HTML**: For page structure.  
-- **CSS**: For styling and design.  
-- **PHP**: For backend logic and data handling.  
-
 ## 🚀 Installation Guide
 1. Clone this repository using Git:  
    ```bash
@@ -37,5 +32,8 @@ To build a community website with the following features:
    - Manage admin accounts.
    - Manage the gallery (add/remove images).
    - View and respond to user/public messages.
+
+## 🛠️ Technologies Used
+<img src="https://skillicons.dev/icons?i=html,css,php">
 
 Made with ❤️ by [senzxc](https://github.com/senzxc)
