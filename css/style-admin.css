@@ -89,6 +89,10 @@ nav .menus-wrapper .dashboard path {
     stroke: var(--white);
 }
 
+nav .menus-wrapper .dashboard-non {
+    margin-bottom: 30px;
+}
+
 nav .menus-wrapper .user {
     background: var(--blue);
     padding: 15px;
@@ -98,6 +102,38 @@ nav .menus-wrapper .user {
 }
 
 nav .menus-wrapper .user path {
+    stroke: var(--white);
+}
+
+nav .menus-wrapper .user-non {
+    margin-bottom: 30px;
+}
+
+nav .menus-wrapper .gallery {
+    background: var(--blue);
+    padding: 15px;
+    border-radius: 10px;
+    color: var(--white);
+    margin-bottom: 30px;
+}
+
+nav .menus-wrapper .gallery path {
+    stroke: var(--white);
+}
+
+nav .menus-wrapper .gallery-non {
+    margin-bottom: 30px;
+}
+
+nav .menus-wrapper .message {
+    background: var(--blue);
+    padding: 15px;
+    border-radius: 10px;
+    color: var(--white);
+    margin-bottom: 30px;
+}
+
+nav .menus-wrapper .message path {
     stroke: var(--white);
 }
 
@@ -177,13 +213,13 @@ nav .logout h2 {
     width: 35px;
 }
 
-.home .statistic .users .icon-group {
+.home .statistic .userss .icon-group {
     background: #a491fc3f;
     padding: 30px;
     border-radius: 10px;
 }
 
-.home .statistic .users .icon-group path {
+.home .statistic .userss .icon-group path {
     fill: #4b2addad;
 }
 
@@ -208,13 +244,13 @@ nav .logout h2 {
     fill: #ddc22aad;
 }
 
-.home .statistic .messages .icon-group {
+.home .statistic .messagess .icon-group {
     background: #9afc9193;
     padding: 30px;
     border-radius: 10px;
 }
 
-.home .statistic .messages .icon-group path {
+.home .statistic .messagess .icon-group path {
     fill: #3fdd2aad;
 }
 
@@ -325,7 +361,7 @@ nav .logout h2 {
 }
 
 .users .recent-users {
-    width: 40%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     background: var(--white);
@@ -362,13 +398,21 @@ nav .logout h2 {
     font-size: 1.2em;
     font-weight: 600;
     margin-bottom: 10px;
+    margin-left: 5rem;
 }
 
 .users .recent-users .box-header h3 {
+    font-size: 1.2em;
+    font-weight: 600;
     margin-left: auto;
-    margin-right: 5vw;
 }
 
+.users .recent-users .box-header h4 {
+    font-size: 1.2em;
+    font-weight: 600;
+    margin-left: auto;
+    margin-right: 2rem;
+}
 
 .users .recent-users .box-user {
     display: flex;
@@ -391,7 +435,214 @@ nav .logout h2 {
     font-size: 1.2em;
     font-weight: 500;
     margin-left: auto;
-    margin-right: 5vw;
+}
+
+.users .recent-users .box-user h5 {
+    font-size: 1.2em;
+    font-weight: 500;
+    margin-left: auto;
+    margin-right: 30px;
 }
 
 /*---------------------- USER END ----------------------*/
+
+/*---------------------- GALLERIES START ----------------------*/
+
+.galleries {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+}
+
+.galleries h1 {
+    font-size: 3em;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.galleries .path {
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+    gap: 25px;
+}
+
+.galleries .path h2 {
+    font-size: 1.2em;
+    font-weight: 500;
+    color: rgb(146, 146, 146);
+}
+
+.galleries .path h3 {
+    font-size: 1.2em;
+    font-weight: 500;
+    color: var(--blue);
+}
+
+.galleries .galleries-wrapper {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.galleries .galleries-wrapper .galleries-box {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-sizing: border-box;
+    flex: 0 1 calc(33.333% - 30px);
+    box-shadow: 0 10px 10px 0 #33333318;
+}
+
+.galleries .galleries-wrapper .galleries-box .galleries-header {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 150px;
+}
+
+.galleries .galleries-wrapper .galleries-box .galleries-header img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.galleries .galleries-wrapper .galleries-box .galleries-header .galleries-date {
+    position: absolute;
+    bottom: 0;
+    left: 30px;
+    background-color: #fff;
+    padding: 5px 20px;
+    border-radius: 20px 20px 0 0;
+}
+
+.galleries .galleries-wrapper .galleries-box .parag-footer {
+    padding: 30px;
+}
+
+/*---------------------- GALLERIES END ----------------------*/
+
+/*---------------------- MESSAGES START ----------------------*/
+
+.messages {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+}
+
+.messages h1 {
+    font-size: 3em;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.messages .path {
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+    gap: 25px;
+}
+
+.messages .path h2 {
+    font-size: 1.2em;
+    font-weight: 500;
+    color: rgb(146, 146, 146);
+}
+
+.messages .path h3 {
+    font-size: 1.2em;
+    font-weight: 500;
+    color: var(--blue);
+}
+
+.messages .recent-messages {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background: var(--white);
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.messages .recent-messages h1 {
+    font-size: 2em;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.messages .recent-messages span {
+    background: var(--blue-lit-trans);
+    padding: 0 15px;
+    border-radius: 7px;
+    color: var(--white);
+}
+
+.messages .recent-messages .table-messages {
+    display: flex;
+    flex-direction: column;
+}
+
+.messages .recent-messages .box-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #b4b4b4;
+}
+
+.messages .recent-messages .box-header h2 {
+    font-size: 1.2em;
+    font-weight: 600;
+    margin-bottom: 10px;
+    margin-left: 2rem;
+}
+
+.messages .recent-messages .box-header h3 {
+    font-size: 1.2em;
+    font-weight: 600;
+    margin-left: auto;
+}
+
+.messages .recent-messages .box-header h4 {
+    font-size: 1.2em;
+    font-weight: 600;
+    margin-left: auto;
+    margin-right: 2rem;
+}
+
+.messages .recent-messages .box-message {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.messages .recent-messages .box-message img {
+    width: 50px;
+    border-radius: 50px;
+    margin-right: 2rem;
+}
+
+.messages .recent-messages .box-message h3 {
+    font-size: 1.2em;
+    font-weight: 500;
+    margin-left: 2rem;
+}
+
+.messages .recent-messages .box-message h4 {
+    font-size: 1.2em;
+    font-weight: 500;
+    margin-left: auto;
+}
+
+.messages .recent-messages .box-message h5 {
+    font-size: 1.2em;
+    font-weight: 500;
+    margin-left: auto;
+    margin-right: 30px;
+}
+
+/*---------------------- MESSAGES END ----------------------*/
