@@ -1,3 +1,35 @@
+<?php
+    session_start();
+    require 'functions.php';
+
+    if (isset($_SESSION["login"])) {
+        header("Location: admin/index.php");
+        exit;
+    }
+
+    if (isset($_POST["login"])) {
+        $username = $_POST['username'];
+        $password = $_POST['password'];
+
+        $result = mysqli_query($conn, "SELECT * FROM user WHERE username = '$username'");
+
+        if (mysqli_num_rows($result) === 1) {
+            $row = mysqli_fetch_assoc($result);
+
+            if (password_verify($password, $row["password"])) {
+                $_SESSION["login"] = true;
+                $_SESSION["name"] = $_POST['username'];
+
+                header("Location: admin/index.php");
+                exit;
+            }
+            $error = true;
+        }
+        $error = true;
+    }
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,6 +44,10 @@
             <h1>Login</h1>
 
             <form action="" method="POST">
+                <?php if (isset($error)) : ?>
+                    <p class="error">Username / Password salah.</p>
+                <?php endif; ?>
+
                 <label for="Username">Username : </label>
                 <input type="text" name="username" id="Username" placeholder="Ketikkan Username Anda">
 

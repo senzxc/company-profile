@@ -100,47 +100,6 @@
                     <?php
                         }
                     ?>
-
-                    <!-- <div class="img-box">
-                        <div class="img-header">
-                            <img class="img2" src="assets/gallery-2.png" alt="gallery-2.png">
-
-                            <div class="img-date">
-                                <p>Nov 06, 2022</p>
-                            </div>
-                        </div>
-
-                        <div class="parag-footer">
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam, quaerat!</p>
-                        </div>
-                    </div>
-                    
-                    <div class="img-box">
-                        <div class="img-header">
-                            <img class="img3" src="assets/gallery-3.png" alt="gallery-3.png">
-
-                            <div class="img-date">
-                                <p>Nov 11, 2023</p>
-                            </div>
-                        </div>
-
-                        <div class="parag-footer">
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam, quaerat!</p>
-                        </div>
-                    </div>
-                    <div class="img-box">
-                        <div class="img-header">
-                            <img class="img4" src="assets/gallery-4.png" alt="gallery-4.png">
-
-                            <div class="img-date">
-                                <p>Nov 18, 2024</p>
-                            </div>
-                        </div>
-
-                        <div class="parag-footer">
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam, quaerat!</p>
-                        </div>
-                    </div> -->
                 </div>
             </article>
         </section>
