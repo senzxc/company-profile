@@ -2,6 +2,11 @@
     session_start();
     require '../functions.php';
 
+    if (!isset($_SESSION["login"])) {
+        header("Location: ../login.php");
+        exit;
+    }
+
     $sql = "SELECT * FROM user";
     $all_user = $conn->query($sql);
 ?>
@@ -66,9 +71,12 @@
                     $row = $result->fetch_assoc();
             ?>
             <div class="recent-users">
-
-                <h1>Total Users &nbsp;<span><?= $row['Total']; ?></span></h1>
-
+                <div class="title-user">
+                    <h1>Total Users &nbsp;<span><?= $row['Total']; ?></span></h1>
+                    <div class="regis-btn">
+                        <a href="register.php">+ New User</a>
+                    </div>
+                </div>
             <?php
                 }
             ?>
