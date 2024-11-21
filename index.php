@@ -11,7 +11,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Biji</title>
+    <title>Itasha</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -19,7 +19,7 @@
         <section class="slides slide1" id="home">
             <nav>
                 <div class="wrapper-nav">
-                    <h2>Biji</h2>
+                    <h2>Itasha</h2>
                     <ul>
                         <li><a href="#home">Home</a></li>
                         <li><a href="#about">About</a></li>
@@ -28,15 +28,13 @@
                     </ul>
                 </div>
                 <div class="wrapper-nav2">
-                    <ul>
-                        <li><a href="login.php">Login</a></li>
-                    </ul>
+                    <a href="login.php">Login</a>
                 </div>
             </nav>
 
             <article>
                 <h1>Untuk Hari dan Masa Depan Mendatang</h1>
-                <p>Melalui Biji 2030 Sustainability Aspirations, Biji melangkah pasti dalam perjalanan untuk menjadi perusahaan yang lebih sustainable dan resilient pada tahun 2030 dan ke depannya.</p>
+                <p>Melalui Itasha 2030 Sustainability Aspirations, Itasha melangkah pasti dalam perjalanan untuk menjadi perusahaan yang lebih sustainable dan resilient pada tahun 2030 dan ke depannya.</p>
 
                 <div class="btn">
                     <button>Cek lebih lanjut &nbsp; &#129106;</button>
@@ -46,24 +44,24 @@
 
         <section class="slides slide2" id="about">
             <article>
-                <h1>Sekilas Biji</h1>
+                <h1>Sekilas Itasha</h1>
                 <h3>1990</h3>
-                <p>› Biji didirikan di Jakarta dengan nama Biji International Inc. ‹</p>
+                <p>› Itasha didirikan di Jakarta dengan nama Itasha International Inc. ‹</p>
                 <p>› Diawali sebagai perusahaan perdagangan umum. ‹</p>
                 <p>&nbsp;</p>
                 <h3>2000</h3>
                 <p>› Penawaran umum perdana saham kepada publik. ‹</p>
-                <p>› Mengubah nama menjadi PT Biji International Tbk. ‹</p>
+                <p>› Mengubah nama menjadi PT Itasha International Tbk. ‹</p>
                 <p>› Terdaftar di Bursa Efek Indonesia dengan kode saham ASII. ‹</p>
 
                 <div class="box-wrapper">
                     <div class="box">
                         <h1>109</h1>
-                        <h2>Tahun bersama Biji</h2>
+                        <h2>Tahun bersama Itasha</h2>
                     </div>
                     <div class="box">
                         <h1>29,3 JT</h1>
-                        <h2>Insan Biji</h2>
+                        <h2>Insan Itasha</h2>
                     </div>
                     <div class="box">
                         <h1>3,3 M</h1>
@@ -77,7 +75,7 @@
 
         <section class="slides slide3" id="gallery">
             <article>
-                <h1>Galeri Biji</h1>
+                <h1>Galeri Itasha</h1>
 
                 <div class="img-wrapper">
 
@@ -169,7 +167,7 @@
                             <svg width="11" height="16" viewBox="0 0 11 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3.06145 15.061L10.1215 8L3.06145 0.938995L0.939453 3.061L5.87945 8L0.939453 12.939L3.06145 15.061Z" fill="#333"></path></svg>
                         </a>
                     </div>
-                    <p>&copy; Biji 2024 All Rights Reserved.</p>
+                    <p>&copy; Itasha 2024 All Rights Reserved.</p>
                 </div>
 
             </footer>

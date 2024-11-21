@@ -19,14 +19,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
     <main class="contact">
         <section class="left">
             <h1>Butuh Bantuan?</h1>
             <h1>Silahkan Hubungi Tim</h1>
-            <h2>BIJI</h2>
+            <h2>ITASHA</h2>
         </section>
 
         <section class="right">
