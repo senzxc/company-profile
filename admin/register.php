@@ -25,7 +25,7 @@
         <section>
             <h1>Registrasi</h1>
 
-            <form action="" method="POST">
+            <form action="" method="POST" enctype="multipart/form-data">
                 <?php if (isset($error)) : ?>
                     <p class="error">Username / Password salah.</p>
                 <?php endif; ?>
@@ -39,10 +39,14 @@
                 <label for="Password2">Konfirmasi Password : </label>
                 <input type="text" name="password2" id="Password2" placeholder="Konfirmasi Password Anda">
 
+                <!-- <label for="profile-label">Foto Profil : </label> -->
+                <label for="ProfilePicture" class="img-profile" id="profile-label">Foto Profil :</label>
+                <input type="file" name="img_profile" id="ProfilePicture" accept="image/*">
+
                 <button type="submit" name="regis">Daftar</button>
             </form>
 
-            <a href="index.php">&#129104; &nbsp; Kembali</a>
+            <a href="user.php">&#129104; &nbsp; Kembali</a>
         </section>
     </main>
 </body>
