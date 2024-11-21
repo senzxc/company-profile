@@ -11,6 +11,7 @@
     --white: #fff;
     --transparant: rgba(0, 0, 0, 0.30);
     --black: #333;
+    --gray: #ebeef1;
 }
 
 html {
@@ -510,7 +511,7 @@ main {
     margin-bottom: 5px;
 }
 
-.login section form input {
+.login section form input[type=text] {
     outline: none;
     border: none;
     width: 300px;
@@ -521,7 +522,7 @@ main {
     transition: 0.3s ease;
 }
 
-.login section form input:focus {
+.login section form input[type=text]:focus {
     border: 1px solid #fff;
     box-shadow: 0 0 10px 2px #fff;
 }
@@ -547,6 +548,41 @@ main {
     border-radius: 20px;
     margin-top: 10px;
     color: #fff;
+}
+
+.login .error {
+    text-align: center;
+    margin-bottom: 10px;
+    color: rgb(255, 99, 99);
+}
+
+/* .login section form input[type=file] {
+    display: none;
+}
+
+.login section form .img-profile {
+    text-align: center;
+    border: 2px solid var(--white);
+    border-radius: 7px;
+    padding: 5px;
+    color: var(--white);
+    cursor: pointer;
+} */
+
+.login section form input[type=file] {
+    background: var(--white);
+    border-radius: 7px;
+    color: var(--black);
+    outline: none;
+    border: none;
+}
+
+::-webkit-file-upload-button {
+    all: unset;
+    background: var(--black);
+    padding: 10px;
+    color: var(--white);
+    margin-right: 1rem;
 }
 
 /*---------------------- LOGIN END ----------------------*/

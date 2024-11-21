@@ -369,16 +369,36 @@ nav .logout h2 {
     border-radius: 10px;
 }
 
-.users .recent-users h1 {
+.users .recent-users .title-user h1 {
     font-size: 2em;
     font-weight: 600;
     margin-bottom: 30px;
 }
 
-.users .recent-users span {
+.users .recent-users .title-user span {
     background: var(--blue-lit-trans);
     padding: 0 15px;
     border-radius: 7px;
+    color: var(--white);
+}
+
+.users .recent-users .title-user {
+    display: flex;
+}
+
+.users .recent-users .title-user .regis-btn {
+    margin-left: auto;
+    margin-top: 0.5rem;
+    margin-right: 2rem;
+}
+
+.users .recent-users .title-user .regis-btn a {
+    font-size: 1.2em;
+    font-weight: 600;
+    text-decoration: none;
+    background: var(--blue-lit-trans);
+    border-radius: 10px;
+    padding: 10px;
     color: var(--white);
 }
 
@@ -404,13 +424,12 @@ nav .logout h2 {
 .users .recent-users .box-header h3 {
     font-size: 1.2em;
     font-weight: 600;
-    margin-left: auto;
+    margin: 0 auto;
 }
 
 .users .recent-users .box-header h4 {
     font-size: 1.2em;
     font-weight: 600;
-    margin-left: auto;
     margin-right: 2rem;
 }
 
@@ -434,13 +453,12 @@ nav .logout h2 {
 .users .recent-users .box-user h4 {
     font-size: 1.2em;
     font-weight: 500;
-    margin-left: auto;
+    margin: 0 auto;
 }
 
 .users .recent-users .box-user h5 {
     font-size: 1.2em;
     font-weight: 500;
-    margin-left: auto;
     margin-right: 30px;
 }
 
