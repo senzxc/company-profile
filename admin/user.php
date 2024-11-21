@@ -1,3 +1,11 @@
+<?php
+    session_start();
+    require '../functions.php';
+
+    $sql = "SELECT * FROM user";
+    $all_user = $conn->query($sql);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,7 +19,7 @@
         <nav>
             <div class="profile">
                 <img src="../assets/gallery-1.png" alt="admin.png">
-                <h1>Company</h1>
+                <h1><?= $_SESSION['name']; ?></h1>
             </div>
 
             <div class="menus-wrapper">
@@ -36,7 +44,7 @@
                 </a>
             </div>
 
-            <a href="" class="logout">
+            <a href="logout.php" class="logout">
                 <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M9.00195 7C9.01406 4.82497 9.11051 3.64706 9.87889 2.87868C10.7576 2 12.1718 2 15.0002 2L16.0002 2C18.8286 2 20.2429 2 21.1215 2.87868C22.0002 3.75736 22.0002 5.17157 22.0002 8L22.0002 16C22.0002 18.8284 22.0002 20.2426 21.1215 21.1213C20.2429 22 18.8286 22 16.0002 22H15.0002C12.1718 22 10.7576 22 9.87889 21.1213C9.11051 20.3529 9.01406 19.175 9.00195 17" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round"></path> <path d="M15 12L2 12M2 12L5.5 9M2 12L5.5 15" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
                 <h2>Logout</h2>
             </a>
@@ -50,10 +58,20 @@
                 <svg width="11" height="16" viewBox="0 0 11 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3.06145 15.061L10.1215 8L3.06145 0.938995L0.939453 3.061L5.87945 8L0.939453 12.939L3.06145 15.061Z" fill="#333"></path></svg>
                 <h3>Users</h3>
             </div>
+            <?php
+                $Sql = "SELECT COUNT(*) AS Total FROM user";
+                $result = $conn->query($Sql);
 
+                if ($result->num_rows > 0) {
+                    $row = $result->fetch_assoc();
+            ?>
             <div class="recent-users">
-                <h1>Total Users &nbsp;<span>3</span></h1>
 
+                <h1>Total Users &nbsp;<span><?= $row['Total']; ?></span></h1>
+
+            <?php
+                }
+            ?>
                 <div class="table-user">
                     <div class="box-header">
                         <h2>User</h2>
@@ -61,24 +79,20 @@
                         <h4>Action</h4>
                     </div>
 
+                    <?php
+                        while ($row = mysqli_fetch_assoc($all_user)) {
+                    ?>
+
                     <div class="box-user">
                         <img src="../assets/gallery-1.png" alt="">
-                        <h3>Jane</h3>
-                        <h4>20 Nov, 2024</h4>
+                        <h3><?= $row['username']; ?></h3>
+                        <h4><?= $row['date']; ?></h4>
                         <h5>delete</h5>
                     </div>
-                    <div class="box-user">
-                        <img src="../assets/gallery-2.png" alt="">
-                        <h3>Gwen</h3>
-                        <h4>12 Nov, 2024</h4>
-                        <h5>delete</h5>
-                    </div>
-                    <div class="box-user">
-                        <img src="../assets/gallery-3.png" alt="">
-                        <h3>Kuina</h3>
-                        <h4>04 Nov, 2024</h4>
-                        <h5>delete</h5>
-                    </div>
+
+                    <?php
+                        }
+                    ?>
                 </div>
             </div>
         </section>

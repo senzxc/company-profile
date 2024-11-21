@@ -1,5 +1,14 @@
 <?php
+    session_start();
     require '../functions.php';
+
+    if (!isset($_SESSION["login"])) {
+        header("Location: ../login.php");
+        exit;
+    }
+
+    $user = "SELECT * FROM user";
+    $all_user = $conn->query($user);
 ?>
 
 <!DOCTYPE html>
@@ -15,7 +24,7 @@
         <nav>
             <div class="profile">
                 <img src="../assets/gallery-1.png" alt="admin.png">
-                <h1>Company</h1>
+                <h1><?= $_SESSION['name']; ?></h1>
             </div>
 
             <div class="menus-wrapper">
@@ -40,7 +49,7 @@
                 </a>
             </div>
 
-            <a href="" class="logout">
+            <a href="logout.php" class="logout">
                 <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M9.00195 7C9.01406 4.82497 9.11051 3.64706 9.87889 2.87868C10.7576 2 12.1718 2 15.0002 2L16.0002 2C18.8286 2 20.2429 2 21.1215 2.87868C22.0002 3.75736 22.0002 5.17157 22.0002 8L22.0002 16C22.0002 18.8284 22.0002 20.2426 21.1215 21.1213C20.2429 22 18.8286 22 16.0002 22H15.0002C12.1718 22 10.7576 22 9.87889 21.1213C9.11051 20.3529 9.01406 19.175 9.00195 17" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round"></path> <path d="M15 12L2 12M2 12L5.5 9M2 12L5.5 15" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
                 <h2>Logout</h2>
             </a>
@@ -60,10 +69,24 @@
                     <div class="icon-group">
                         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M10.1992 12C12.9606 12 15.1992 9.76142 15.1992 7C15.1992 4.23858 12.9606 2 10.1992 2C7.43779 2 5.19922 4.23858 5.19922 7C5.19922 9.76142 7.43779 12 10.1992 12Z" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M1 22C1.57038 20.0332 2.74795 18.2971 4.36438 17.0399C5.98081 15.7827 7.95335 15.0687 10 15C14.12 15 17.63 17.91 19 22" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M17.8205 4.44006C18.5822 4.83059 19.1986 5.45518 19.579 6.22205C19.9594 6.98891 20.0838 7.85753 19.9338 8.70032C19.7838 9.5431 19.3674 10.3155 18.7458 10.9041C18.1243 11.4926 17.3302 11.8662 16.4805 11.97" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M17.3203 14.5701C18.6543 14.91 19.8779 15.5883 20.8729 16.5396C21.868 17.4908 22.6007 18.6827 23.0003 20" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
                     </div>
+
+                    <?php
+                        $Sql = "SELECT COUNT(*) AS Total FROM user";
+                        $result = $conn->query($Sql);
+
+                        if ($result->num_rows > 0) {
+                            $row = $result->fetch_assoc();
+                    ?>
+
                     <div class="title-group">
-                        <h1>3</h1>
+                        <h1><?= $row['Total']; ?></h1>
                         <h2>Users</h2>
                     </div>
+
+                    <?php
+                        }
+                    ?>
+
                 </div>
 
                 <div class="stat-box images">
@@ -72,7 +95,7 @@
                     </div>
 
                     <?php
-                        $sql = "SELECT COUNT(*) AS Total FROM gallery";
+                        $sql = "SELECT COUNT(*) AS total FROM gallery";
                         $result = $conn->query($sql);
 
                         if ($result->num_rows > 0) {
@@ -80,7 +103,7 @@
                     ?>
 
                     <div class="title-group">
-                        <h1><?= $row['Total']; ?></h1>
+                        <h1><?= $row['total']; ?></h1>
                         <h2>Images</h2>
                     </div>
 
@@ -96,14 +119,14 @@
                     </div>
 
                     <?php
-                        $SQL = "SELECT COUNT(*) AS total FROM contact";
+                        $SQL = "SELECT COUNT(*) AS TOTAL FROM contact";
                         $result = $conn->query($SQL);
 
                         if ($result->num_rows > 0) {
                             $row = $result->fetch_assoc();
                     ?>
                     <div class="title-group">
-                        <h1><?= $row['total']; ?></h1>
+                        <h1><?= $row['TOTAL']; ?></h1>
                         <h2>Messages</h2>
                     </div>
 
@@ -124,21 +147,19 @@
                         <h3>Create Date</h3>
                     </div>
 
+                    <?php
+                        while ($row = mysqli_fetch_assoc($all_user)) {
+                    ?>
+                    
                     <div class="box-user">
                         <img src="../assets/gallery-1.png" alt="">
-                        <h3>Jane</h3>
-                        <h4>20 Nov, 2024</h4>
+                        <h3><?= $row['username']; ?></h3>
+                        <h4><?= $row['date']; ?></h4>
                     </div>
-                    <div class="box-user">
-                        <img src="../assets/gallery-2.png" alt="">
-                        <h3>Gwen</h3>
-                        <h4>17 Nov, 2024</h4>
-                    </div>
-                    <div class="box-user">
-                        <img src="../assets/gallery-3.png" alt="">
-                        <h3>Kuina</h3>
-                        <h4>05 Nov, 2024</h4>
-                    </div>
+
+                    <?php
+                        }
+                    ?>
                 </div>
             </div>
         </section>
