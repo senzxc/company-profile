@@ -85,7 +85,7 @@
 
                     <div class="img-box">
                         <div class="img-header">
-                            <img class="img1" src="<?= $row["img"]; ?>" alt="gallery-1.png">
+                            <img class="img1" src="../assets/uploads/<?= $row["img"]; ?>" alt="gallery-1.png">
 
                             <div class="img-date">
                                 <p><?= $row["date"]; ?></p>
