@@ -9,6 +9,9 @@
 
     $user = "SELECT * FROM user";
     $all_user = $conn->query($user);
+
+    $sql = "SELECT * FROM contact";
+    $all_msg = $conn->query($sql);
 ?>
 
 <!DOCTYPE html>
@@ -23,7 +26,7 @@
     <main>
         <nav>
             <div class="profile">
-                <img src="../assets/gallery-1.png" alt="admin.png">
+                <img src="<?= $_SESSION['profile']; ?>" alt="admin.png">
                 <h1><?= $_SESSION['name']; ?></h1>
             </div>
 
@@ -138,28 +141,61 @@
                 </div>
             </div>
 
-            <div class="recent-users">
-                <h1>Recent Users</h1>
+            <div class="recent-group">
+                <div class="recent-users">
+                    <h1>Recent Users</h1>
 
-                <div class="table-user">
-                    <div class="box-header">
-                        <h2>User</h2>
-                        <h3>Create Date</h3>
+                    <div class="table-user">
+                        <div class="box-header">
+                            <h2>User</h2>
+                            <h3>Create Date</h3>
+                        </div>
+
+                        <?php
+                            while ($row = mysqli_fetch_assoc($all_user)) {
+                        ?>
+                        
+                        <div class="box-user">
+                            <img src="<?= "../assets/uploads/" . $row['img_profile']; ?>" alt="">
+                            <h3><?= $row['username']; ?></h3>
+                            <h4><?= $row['date']; ?></h4>
+                        </div>
+
+                        <?php
+                            }
+                        ?>
                     </div>
+                </div>
+
+                <div class="recent-messages">
+                    <h1>Recent Messages</h1>
 
                     <?php
-                        while ($row = mysqli_fetch_assoc($all_user)) {
+                        if ($all_msg && $all_msg->num_rows > 0) {
                     ?>
-                    
-                    <div class="box-user">
-                        <img src="../assets/gallery-1.png" alt="">
-                        <h3><?= $row['username']; ?></h3>
-                        <h4><?= $row['date']; ?></h4>
-                    </div>
-
-                    <?php
+                    <div class="table-messages">
+                        <div class="box-header">
+                            <h2>User</h2>
+                            <h4>Message</h4>
+                        </div>
+                        <?php
+                            while ($row = $all_msg->fetch_assoc()) {
+                        ?>
+                        <div class="box-message">
+                            <h3><?= $row["name"]; ?></h3>
+                            <h5><?= $row["message"]; ?></h5>
+                        </div>
+                        <?php
+                            }
+                        ?>
+                        <?php
+                        } else {
+                        ?>
+                        <h6 class="no-msg">No Messages</h6>
+                        <?php
                         }
-                    ?>
+                        ?>
+                    </div>
                 </div>
             </div>
         </section>

@@ -2,6 +2,11 @@
     session_start();
     require '../functions.php';
 
+    if (!isset($_SESSION["login"])) {
+        header("Location: ../login.php");
+        exit;
+    }
+
     $sql = "SELECT * FROM contact";
     $all_msg = $conn->query($sql);
 ?>
@@ -18,7 +23,7 @@
     <main>
         <nav>
             <div class="profile">
-                <img src="../assets/gallery-1.png" alt="admin.png">
+                <img src="<?= $_SESSION['profile']; ?>" alt="admin.png">
                 <h1><?= $_SESSION['name']; ?></h1>
             </div>
 
@@ -74,27 +79,31 @@
                     $conn->close();
                 ?>
 
+                <?php
+                    if ($all_msg && $all_msg->num_rows > 0) {
+                ?>
                 <div class="table-messages">
                     <div class="box-header">
                         <h2>User</h2>
-                        <h3>Email</h3>
                         <h4>Message</h4>
                     </div>
-
                     <?php
-                        while ($row = mysqli_fetch_assoc($all_msg)) {
+                        while ($row = $all_msg->fetch_assoc()) {
                     ?>
-
                     <div class="box-message">
                         <h3><?= $row["name"]; ?></h3>
-                        <h4><?= $row["email"]; ?></h4>
                         <h5><?= $row["message"]; ?></h5>
                     </div>
-
                     <?php
                         }
                     ?>
-
+                    <?php
+                    } else {
+                    ?>
+                    <h6 class="no-msg">No Messages</h6>
+                    <?php
+                    }
+                    ?>
                 </div>
             </div>
         </section>
