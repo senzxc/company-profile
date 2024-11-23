@@ -117,7 +117,7 @@ main {
 
 .slide1 article h1 {
     font-size: 3em;
-    max-width: 50vw;
+    max-width: 40vw;
 }
 
 .slide1 article p {
@@ -308,11 +308,12 @@ main {
 .slide4 footer .img-footer {
     width: 50%;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    margin-bottom: -6.5rem;
 }
 
 .slide4 footer .img-footer img {
-    width: 90%;
+    width: 45%;
 }
 
 .slide4 footer .text-footer {
