@@ -26,22 +26,19 @@
             <h1>Registrasi</h1>
 
             <form action="" method="POST" enctype="multipart/form-data">
-                <?php if (isset($error)) : ?>
-                    <p class="error">Username / Password salah.</p>
-                <?php endif; ?>
 
                 <label for="Username">Username : </label>
-                <input type="text" name="username" id="Username" placeholder="Ketikkan Username Anda">
+                <input type="text" name="username" id="Username" placeholder="Ketikkan Username Anda" required>
 
                 <label for="Password">Password : </label>
-                <input type="text" name="password" id="Password" placeholder="Ketikkan Password Anda">
+                <input type="text" name="password" id="Password" placeholder="Ketikkan Password Anda" required>
 
                 <label for="Password2">Konfirmasi Password : </label>
-                <input type="text" name="password2" id="Password2" placeholder="Konfirmasi Password Anda">
+                <input type="text" name="password2" id="Password2" placeholder="Konfirmasi Password Anda" required>
 
                 <!-- <label for="profile-label">Foto Profil : </label> -->
                 <label for="ProfilePicture" class="img-profile" id="profile-label">Foto Profil :</label>
-                <input type="file" name="img_profile" id="ProfilePicture" accept="image/*">
+                <input type="file" name="img" id="ProfilePicture" accept="image/*">
 
                 <button type="submit" name="regis">Daftar</button>
             </form>

@@ -23,7 +23,7 @@
     <main>
         <nav>
             <div class="profile">
-                <img src="../assets/gallery-1.png" alt="admin.png">
+                <img src="<?= $_SESSION['profile']; ?>" alt="admin.png">
                 <h1><?= $_SESSION['name']; ?></h1>
             </div>
 
@@ -92,10 +92,10 @@
                     ?>
 
                     <div class="box-user">
-                        <img src="../assets/gallery-1.png" alt="">
+                        <img src="<?= "../assets/uploads/" . $row['img_profile']; ?>" alt="">
                         <h3><?= $row['username']; ?></h3>
                         <h4><?= $row['date']; ?></h4>
-                        <h5>delete</h5>
+                        <a href="delete.php?type=user&id=<?= $row['id_user']; ?>">Delete</a>
                     </div>
 
                     <?php
