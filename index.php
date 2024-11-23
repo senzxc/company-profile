@@ -11,7 +11,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Itasha</title>
+    <title>Ford</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -19,7 +19,7 @@
         <section class="slides slide1" id="home">
             <nav>
                 <div class="wrapper-nav">
-                    <h2>Itasha</h2>
+                    <h2>Ford</h2>
                     <ul>
                         <li><a href="#home">Home</a></li>
                         <li><a href="#about">About</a></li>
@@ -33,8 +33,8 @@
             </nav>
 
             <article>
-                <h1>Untuk Hari dan Masa Depan Mendatang</h1>
-                <p>Melalui Itasha 2030 Sustainability Aspirations, Itasha melangkah pasti dalam perjalanan untuk menjadi perusahaan yang lebih sustainable dan resilient pada tahun 2030 dan ke depannya.</p>
+                <h1>Solusi Digital untuk Masa Depan Anda</h1>
+                <p>Menghadirkan solusi digital marketing yang dirancang untuk meningkatkan pertumbuhan bisnis Anda. Dengan pendekatan kreatif dan berbasis data, kami membantu merek Anda tampil menonjol di tengah persaingan.</p>
 
                 <div class="btn">
                     <button>Cek lebih lanjut &nbsp; &#129106;</button>
@@ -44,28 +44,28 @@
 
         <section class="slides slide2" id="about">
             <article>
-                <h1>Sekilas Itasha</h1>
+                <h1>Sekilas Ford</h1>
                 <h3>1990</h3>
-                <p>› Itasha didirikan di Jakarta dengan nama Itasha International Inc. ‹</p>
+                <p>› Ford didirikan di Jakarta dengan nama Ford International Inc. ‹</p>
                 <p>› Diawali sebagai perusahaan perdagangan umum. ‹</p>
                 <p>&nbsp;</p>
                 <h3>2000</h3>
-                <p>› Penawaran umum perdana saham kepada publik. ‹</p>
-                <p>› Mengubah nama menjadi PT Itasha International Tbk. ‹</p>
+                <p>›Transformasi ke bidang Digital Marketing. ‹</p>
+                <p>› Mengubah nama menjadi PT Ford Digital Agency. ‹</p>
                 <p>› Terdaftar di Bursa Efek Indonesia dengan kode saham ASII. ‹</p>
 
                 <div class="box-wrapper">
                     <div class="box">
                         <h1>109</h1>
-                        <h2>Tahun bersama Itasha</h2>
+                        <h2>Tahun bersama Ford</h2>
                     </div>
                     <div class="box">
-                        <h1>29,3 JT</h1>
-                        <h2>Insan Itasha</h2>
+                        <h1>9,5 JT</h1>
+                        <h2>Klien kami</h2>
                     </div>
                     <div class="box">
-                        <h1>3,3 M</h1>
-                        <h2>Program Makan Gratis</h2>
+                        <h1>3,3 T</h1>
+                        <h2>Total Revenue</h2>
                     </div>
                 </div>
 
@@ -75,7 +75,7 @@
 
         <section class="slides slide3" id="gallery">
             <article>
-                <h1>Galeri Itasha</h1>
+                <h1>Galeri Ford</h1>
 
                 <div class="img-wrapper">
 
@@ -85,7 +85,7 @@
 
                     <div class="img-box">
                         <div class="img-header">
-                            <img class="img1" src="../assets/uploads/<?= $row["img"]; ?>" alt="gallery-1.png">
+                            <img class="img1" src="assets/uploads/<?= $row["img"]; ?>" alt="gallery-1.png">
 
                             <div class="img-date">
                                 <p><?= $row["date"]; ?></p>
@@ -112,7 +112,7 @@
 
                 <div class="text-footer">
                     <h1>Terhubung dengan Kami</h1>
-                    <p>Jadilah bagian dari komunitas kami yang bersemangat dan saling terhubung dalam visi masa depan yang berkelanjutan.</p>
+                    <p>Jadilah bagian dari kami yang bersemangat dan saling terhubung dalam visi masa depan yang berkelanjutan.</p>
 
                     <div class="social-icon">
                         <svg class="insta" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="24" cy="24" r="24" fill="white"></circle><path d="M20.5728 16.2857C18.2063 16.2857 16.2871 18.2048 16.2871 20.5714V27.4286C16.2871 29.7951 18.2063 31.7143 20.5728 31.7143H27.43C29.7965 31.7143 31.7157 29.7951 31.7157 27.4286V20.5714C31.7157 18.2048 29.7965 16.2857 27.43 16.2857H20.5728ZM29.1443 18C29.6174 18 30.0014 18.384 30.0014 18.8571C30.0014 19.3303 29.6174 19.7143 29.1443 19.7143C28.6711 19.7143 28.2871 19.3303 28.2871 18.8571C28.2871 18.384 28.6711 18 29.1443 18ZM24.0014 19.7143C26.368 19.7143 28.2871 21.6334 28.2871 24C28.2871 26.3666 26.368 28.2857 24.0014 28.2857C21.6348 28.2857 19.7157 26.3666 19.7157 24C19.7157 21.6334 21.6348 19.7143 24.0014 19.7143ZM24.0014 21.4286C23.3194 21.4286 22.6654 21.6995 22.1831 22.1817C21.7009 22.664 21.43 23.318 21.43 24C21.43 24.682 21.7009 25.336 22.1831 25.8183C22.6654 26.3005 23.3194 26.5714 24.0014 26.5714C24.6834 26.5714 25.3374 26.3005 25.8197 25.8183C26.3019 25.336 26.5728 24.682 26.5728 24C26.5728 23.318 26.3019 22.664 25.8197 22.1817C25.3374 21.6995 24.6834 21.4286 24.0014 21.4286Z" fill="#333"></path></svg>
@@ -126,7 +126,7 @@
                             <svg width="11" height="16" viewBox="0 0 11 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3.06145 15.061L10.1215 8L3.06145 0.938995L0.939453 3.061L5.87945 8L0.939453 12.939L3.06145 15.061Z" fill="#333"></path></svg>
                         </a>
                     </div>
-                    <p>&copy; Itasha 2024 All Rights Reserved.</p>
+                    <p>&copy; Ford Digital Agency 2024 All Rights Reserved.</p>
                 </div>
 
             </footer>
