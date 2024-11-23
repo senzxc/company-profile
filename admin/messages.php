@@ -85,6 +85,7 @@
                 <div class="table-messages">
                     <div class="box-header">
                         <h2>User</h2>
+                        <h3>Email</h3>
                         <h4>Message</h4>
                     </div>
                     <?php
@@ -92,6 +93,7 @@
                     ?>
                     <div class="box-message">
                         <h3><?= $row["name"]; ?></h3>
+                        <h4><?= $row["email"]; ?></h4>
                         <h5><?= $row["message"]; ?></h5>
                     </div>
                     <?php
