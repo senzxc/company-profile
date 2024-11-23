@@ -91,6 +91,13 @@
         return mysqli_affected_rows($conn);
     }
 
+    function deleteMsg($id_contact) {
+        global $conn;
+
+        mysqli_query($conn, "DELETE FROM contact WHERE id_contact = $id_contact");
+        return mysqli_affected_rows($conn);
+    }
+
     function add_img($data) {
         global $conn;
 
