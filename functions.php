@@ -4,9 +4,9 @@
     function contact($data) {
         global $conn;
 
-        $name = $data["name"];
-        $email = $data["email"];
-        $message = $data["message"];
+        $name = htmlspecialchars($data["name"]);
+        $email = htmlspecialchars($data["email"]);
+        $message = htmlspecialchars($data["message"]);
 
         mysqli_query($conn, "INSERT INTO contact VALUES('', '$name', '$email', '$message')");
 
@@ -36,22 +36,22 @@
                 return false;
         }
 
-        $img_profile = uploadProfile();
-        if (!$img_profile) {
+        $img = uploadProfile();
+        if (!$img) {
             return false;
         }
 
         $password = password_hash($password, PASSWORD_DEFAULT);
 
-        mysqli_query($conn, "INSERT INTO user VALUES ('', '$username', '$password', NOW(), '$img_profile')");
+        mysqli_query($conn, "INSERT INTO user VALUES ('', '$username', '$password', NOW(), '$img')");
 
         return mysqli_affected_rows($conn);
     }
 
     function uploadProfile() {
-        $fileName = $_FILES['img_profile']['name'];
-        $fileSize = $_FILES['img_profile']['size'];
-        $tmpName = $_FILES['img_profile']['tmp_name'];
+        $fileName = $_FILES['img']['name'];
+        $fileSize = $_FILES['img']['size'];
+        $tmpName = $_FILES['img']['tmp_name'];
 
         $validImgExtension = ['jpg', 'jpeg', 'png'];
         $imgExtension = strtolower(pathinfo($fileName, PATHINFO_EXTENSION));
@@ -74,5 +74,34 @@
         move_uploaded_file($tmpName, '../assets/uploads/' . $newFileName);
 
         return $newFileName;
+    }
+
+    function deleteUser($id_user) {
+        global $conn;
+
+        mysqli_query($conn, "DELETE FROM user WHERE id_user = $id_user");
+        return mysqli_affected_rows($conn);
+
+    }
+
+    function deleteGallery($id_gallery) {
+        global $conn;
+
+        mysqli_query($conn, "DELETE FROM gallery WHERE id_gallery = $id_gallery");
+        return mysqli_affected_rows($conn);
+    }
+
+    function add_img($data) {
+        global $conn;
+
+        $desc = $data['description'];
+
+        $img = uploadProfile();
+        if (!$img) {
+            return false;
+        } 
+
+        mysqli_query($conn, "INSERT INTO gallery VALUES ('', '$img', NOW(), '$desc')");
+        return mysqli_affected_rows($conn);
     }
 ?>
