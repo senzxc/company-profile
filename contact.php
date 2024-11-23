@@ -26,7 +26,7 @@
         <section class="left">
             <h1>Butuh Bantuan?</h1>
             <h1>Silahkan Hubungi Tim</h1>
-            <h2>ITASHA</h2>
+            <h2>FORD</h2>
         </section>
 
         <section class="right">
