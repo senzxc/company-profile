@@ -19,6 +19,7 @@
             if (password_verify($password, $row["password"])) {
                 $_SESSION["login"] = true;
                 $_SESSION["name"] = $_POST['username'];
+                $_SESSION["profile"] = "../assets/uploads/" . $row['img_profile'];
 
                 header("Location: admin/index.php");
                 exit;
