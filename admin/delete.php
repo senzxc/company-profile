@@ -15,10 +15,15 @@
             $redirect = 'galleries.php';
             $successMsg = 'Image deleted successfully';
             $failedMsg = 'Image failed to delete';
+        } elseif ($type === 'msg'){
+            $result = deleteMsg($id);
+            $redirect = 'messages.php';
+            $successMsg = 'Message deleted successfully';
+            $failedMsg = 'Message failed to delete';
         } else {
             echo "<script>
                     alert('Invalid type specified.');
-                    document.location.href = 'index.php'; // Redirect ke halaman utama
+                    document.location.href = 'index.php';
                 </script>";
         }
 
