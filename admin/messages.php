@@ -87,6 +87,7 @@
                         <h2>User</h2>
                         <h3>Email</h3>
                         <h4>Message</h4>
+                        <h4>Action</h4>
                     </div>
                     <?php
                         while ($row = $all_msg->fetch_assoc()) {
@@ -95,6 +96,7 @@
                         <h3><?= $row["name"]; ?></h3>
                         <h4><?= $row["email"]; ?></h4>
                         <h5><?= $row["message"]; ?></h5>
+                        <a href="delete.php?type=msg&id=<?= $row['id_contact']; ?>">Delete</a>
                     </div>
                     <?php
                         }
