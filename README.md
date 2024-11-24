@@ -34,6 +34,6 @@ To build a professional company profile website with the following features:
    http://localhost/company-profile
 
 ## 🛠️ Tech Stack
-<img src="https://skillicons.dev/icons?i=html,css,php">
+<img src="https://skillicons.dev/icons?i=html,css,js,php">
 
 Made with ❤️ by [senzxc](https://github.com/senzxc)
