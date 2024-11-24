@@ -19,7 +19,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <main class="contact">
@@ -35,17 +35,17 @@
             <form action="" method="POST">
                 <div class="form-group name">
                     <label for="Nama">Nama</label>
-                    <input type="text" name="name" id="Nama" placeholder="Ketikkan Nama Anda">
+                    <input type="text" name="name" id="Nama" placeholder="Ketikkan Nama Anda" required>
                 </div>
 
                 <div class="form-group email">
                     <label for="Email">Email</label>
-                    <input type="text" name="email" id="Email" placeholder="Ketikkan Email Anda">
+                    <input type="email" name="email" id="Email" placeholder="Ketikkan Email Anda" required>
                 </div>
 
                 <div class="form-group msg">
                     <label for="Pesan">Pesan</label>
-                    <textarea name="message" id="Pesan" placeholder="Ketikkan Pesan Anda"></textarea>
+                    <textarea name="message" id="Pesan" placeholder="Ketikkan Pesan Anda" required></textarea>
                 </div>
 
                 <div class="form-btn">
