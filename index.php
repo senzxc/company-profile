@@ -107,7 +107,7 @@
         <section class="slides slide4" id="contact">
             <footer>
                 <div class="img-footer">
-                    <img src="assets/gallery-5.png" alt="gallery-5.png">
+                    <img src="assets/gallery-6.png" alt="gallery-5.png">
                 </div>
 
                 <div class="text-footer">
