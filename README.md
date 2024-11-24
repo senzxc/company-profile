@@ -1,23 +1,23 @@
-# Community Profile Website
+# Ford Marketing Agency Website
 
-This website serves as a community platform to showcase various community events, a gallery, and a means for the public to provide suggestions or feedback to the community.
+This website represents Ford Marketing Agency, showcasing our expertise, and providing a direct communication channel for our clients and partners.
 
 ## 🎯 Purpose
-To build a community website with the following features:  
-- Display community events.  
-- Provide a community gallery.  
+To build a professional company profile website with the following features:  
+- Display the latest campaigns and services.
+- Provide a company gallery.  
 - Offer a form for public suggestions/feedback.  
 
 ## ✨ Key Features
-1. For Users (Public):
-   - Homepage displaying community events.
-   - Gallery showcasing community activities.
-   - Form to submit suggestions or feedback to the community.
+1. For Visitors (Clients/Partners):
+   - Homepage displaying company campaigns.
+   - Gallery showcasing company activities.
+   - Form to submit suggestions or feedback to the company.
 
 2. For Admins:
    - Manage admin accounts.
    - Manage the gallery (add/remove images).
-   - View and respond to user/public messages.
+   - View client messages.
 
 ## 🚀 Installation Guide
 1. Clone this repository using Git:  
