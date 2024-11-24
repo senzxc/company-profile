@@ -11,6 +11,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scrollbar/8.7.4/smooth-scrollbar.js"></script>
     <title>Ford</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -44,12 +47,12 @@
 
         <section class="slides slide2" id="about">
             <article>
-                <h1>Sekilas Ford</h1>
-                <h3>1990</h3>
+                <h1 class="title">Sekilas Ford</h1>
+                <h3 class="title2">1990</h3>
                 <p>› Ford didirikan di Jakarta dengan nama Ford International Inc. ‹</p>
                 <p>› Diawali sebagai perusahaan perdagangan umum. ‹</p>
                 <p>&nbsp;</p>
-                <h3>2000</h3>
+                <h3 class="title2">2000</h3>
                 <p>›Transformasi ke bidang Digital Marketing. ‹</p>
                 <p>› Mengubah nama menjadi PT Ford Digital Agency. ‹</p>
                 <p>› Terdaftar di Bursa Efek Indonesia dengan kode saham ASII. ‹</p>
@@ -128,9 +131,10 @@
                     </div>
                     <p>&copy; Ford Digital Agency 2024 All Rights Reserved.</p>
                 </div>
-
             </footer>
         </section>
     </main>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
