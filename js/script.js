@@ -61,57 +61,58 @@ gsap.from(".slide1 .btn", {
 gsap.from(".slide2 article .title", {
     scrollTrigger: {
         trigger: ".slide2",
-        toggleActions: "restart none none none",
+        toggleActions: "restart reset restart reset",
     },
     y: -300,
     opacity: 0,
     duration: 1,
-    ease: "back"
+    ease: "back",
+    delay: 0.5
 })
 
 gsap.from(".slide2 article .title2", {
     scrollTrigger: {
-        trigger: ".slide2 .title2",
-        toggleActions: "restart none none none",
+        trigger: ".slide2",
+        toggleActions: "restart reset restart reset",
     },
     y: -200,
     opacity: 0,
     duration: 1,
     stagger: 0.2,
     ease: "back",
-    delay: 0.2
+    delay: 0.8
 })
 
 gsap.from(".slide2 article p", {
     scrollTrigger: {
-        trigger: ".slide2 p",
-        toggleActions: "restart none none none",
+        trigger: ".slide2",
+        toggleActions: "restart reset restart reset",
     },
     y: 100,
     opacity: 0,
     duration: 0.5,
     stagger: 0.2,
     ease: "back",
-    delay: 0.2
+    delay: 1
 })
 
 gsap.from(".slide2 .box-wrapper .box", {
     scrollTrigger: {
-        trigger: ".slide2 .box-wrapper .box",
-        toggleActions: "restart none none none",
+        trigger: ".slide2",
+        toggleActions: "restart reset restart reset",
     },
     y: 300,
     opacity: 0,
     duration: 1,
     stagger: 0.2,
     ease: "back",
-    delay: 0.5
+    delay: 1
 })
 
 gsap.from(".slide3 h1", {
     scrollTrigger: {
         trigger: ".slide3",
-        toggleActions: "restart none none none",
+        toggleActions: "restart reset restart reset",
     },
     y: 300,
     opacity: 0,
@@ -124,7 +125,7 @@ gsap.from(".slide3 h1", {
 gsap.from(".slide3 .img-box", {
     scrollTrigger: {
         trigger: ".slide3",
-        toggleActions: "restart none none none",
+        toggleActions: "restart reset restart reset",
     },
     y: 200,
     opacity: 0,
