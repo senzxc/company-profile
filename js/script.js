@@ -6,16 +6,7 @@ ScrollTrigger.defaults({
     snap: 1
 });
 
-// const mouseOverAnim = (elem) => {
-//     gsap.to(elem.querySelectorAll(".wrapper-nav ul li a:nth-child(1)"), {
-//         top: "-100%",
-//         duration: 0.3
-//     })
-//     gsap.to(elem.querySelectorAll(".wrapper-nav ul li a:nth-child(2)"), {
-//         top: "0%",
-//         duration: 0.3
-//     })
-// }
+
 
 gsap.from(".wrapper-nav", {
     y: -100,
