@@ -92,10 +92,6 @@ main {
     color: #333;
 }
 
-.slide1 nav:hover .wrapper-nav ul li a {
-    color: #eee;
-}
-
 .slide1 nav .wrapper-nav2 {
     display: flex;
     align-items: center;
