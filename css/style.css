@@ -14,19 +14,15 @@
     --gray: #ebeef1;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
 body {
     background: linear-gradient(35deg, #fcfdee, #c5bddf);
-    height: 100vh;
+    overflow: hidden;
 }
 
 main {
     width: 100%;
     height: 100vh;
-    /* overflow-y: scroll; */
+    overflow-y: scroll;
     scroll-snap-type: y mandatory;
 }
 
@@ -38,6 +34,18 @@ main {
     color: #fff;
     scroll-snap-align: start;
 }
+
+#transition-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black; /* Warna transisi */
+    z-index: 9999;
+    transform: translateX(-100%); /* Awalnya di luar layar */
+}
+
 
 /*---------------------- SLIDE 1 START ----------------------*/
 
@@ -82,6 +90,10 @@ main {
     text-decoration: none;
     font-size: 1.3em;
     color: #333;
+}
+
+.slide1 nav:hover .wrapper-nav ul li a {
+    color: #eee;
 }
 
 .slide1 nav .wrapper-nav2 {
