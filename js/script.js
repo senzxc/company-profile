@@ -6,8 +6,6 @@ ScrollTrigger.defaults({
     snap: 1
 });
 
-
-
 gsap.from(".wrapper-nav", {
     y: -100,
     duration: 2,
