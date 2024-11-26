@@ -92,6 +92,14 @@ main {
     color: #333;
     overflow: hidden;
     line-height: 2em;
+    transition: 0.3s ease;
+}
+
+.slide1 nav .wrapper-nav ul li a:hover {
+    background: var(--black);
+    color: var(--white);
+    padding: 0.8rem 1.5rem;
+    border-radius: 50px;
 }
 
 .slide1 nav .wrapper-nav2 {
@@ -111,6 +119,11 @@ main {
     text-decoration: none;
     box-shadow: 0 10px 20px 0 #44444428;
     color: #fff;
+    transition: 0.3s ease;
+}
+
+.slide1 nav .wrapper-nav2 a:hover {
+    opacity: 0.5;
 }
 
 .slide1 article {
@@ -343,6 +356,16 @@ main {
     align-items: center;
     margin-bottom: 30px;
     gap: 10px;
+    transition: 0.3s ease;
+}
+
+.slide4 footer .text-footer .social-icon svg {
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.slide4 footer .text-footer .social-icon svg:hover {
+    opacity: 0.5;
 }
 
 .slide4 footer .text-footer .social-icon .social-btn {
@@ -355,6 +378,12 @@ main {
     margin-left: 20px;
     color: #333;
     gap: 10px;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.slide4 footer .text-footer .social-icon .social-btn:hover {
+    opacity: 0.5;
 }
 
 /*---------------------- SLIDE 4 END ----------------------*/
