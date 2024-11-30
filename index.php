@@ -56,7 +56,7 @@
 
                 <div class="box-wrapper">
                     <div class="box">
-                        <h1 data-target="109">0</h1>
+                        <h1 data-target="55">0</h1>
                         <h2>Tahun bersama Ford</h2>
                     </div>
                     <div class="box">
