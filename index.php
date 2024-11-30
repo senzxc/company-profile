@@ -56,18 +56,19 @@
 
                 <div class="box-wrapper">
                     <div class="box">
-                        <h1>109</h1>
+                        <h1 data-target="109">0</h1>
                         <h2>Tahun bersama Ford</h2>
                     </div>
                     <div class="box">
-                        <h1>9,5 JT</h1>
+                        <h1 data-target="9540">0</h1>
                         <h2>Klien kami</h2>
                     </div>
                     <div class="box">
-                        <h1>3,3 T</h1>
+                        <h1 data-target="3303">0</h1>
                         <h2>Total Revenue</h2>
                     </div>
                 </div>
+
 
                 <p class="parag-end">Kami berkomitmen menciptakan kegiatan bisnis yang berkelanjutan yang dapat berkontribusi dalam memperkuat ekonomi Indonesia serta mendukung masyarakat yang sejahtera dan inklusif.</p>
             </article>
