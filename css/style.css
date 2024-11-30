@@ -49,6 +49,10 @@ main {
 
 /*---------------------- SLIDE 1 START ----------------------*/
 
+.slide1 {
+    position: relative;
+}
+
 .slide1 nav {
     width: 100%;
     position: fixed;
