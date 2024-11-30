@@ -106,6 +106,35 @@ gsap.from(".slide2 .box-wrapper .box", {
     delay: 1
 })
 
+// JavaScript
+document.querySelectorAll(".slide2 .box-wrapper .box h1").forEach((el, index) => {
+    const targetValue = parseInt(el.dataset.target.replace(/,/g, "")); // Mengambil angka target
+    let suffix = ""; // Default suffix kosong
+
+    // Menentukan suffix berdasarkan indeks
+    if (index === 0) suffix = "";
+    else if (index === 1) suffix = " JT+";
+    else if (index === 2) suffix = " T+";
+
+    gsap.fromTo(el, 
+        { innerText: 0 }, 
+        { 
+            innerText: targetValue, 
+            duration: 2, 
+            scrollTrigger: {
+                trigger: ".slide2",
+                start: "top center",
+                toggleActions: "restart reset restart reset",
+            },
+            onUpdate: function () {
+                // Format angka dan tambahkan suffix
+                el.innerText = Math.ceil(el.innerText).toLocaleString() + suffix;
+            },
+            snap: { innerText: 1 } // Membulatkan nilai saat transisi
+        }
+    );
+});
+
 gsap.from(".slide3 h1", {
     scrollTrigger: {
         trigger: ".slide3",
@@ -142,3 +171,54 @@ gsap.from(".slide4 footer", {
     delay: 0.3,
     ease: "power1"
 })
+
+
+// //counter
+// let section_counter = document.querySelector('#about');
+// let counters = document.querySelectorAll('.slide2 .box .counter');
+
+// //scroll anim
+// let counterObserver = new IntersectionObserver(
+//     (entries, observer) => {
+//         let [entry] = entries;
+//         if (!entry.isIntersecting) return;
+
+//         let speed = 200;
+//         counters.forEach((counter, index) => {
+//             let suffix = "";
+//             if (index === 0) suffix = "M";
+//             else if (index === 1) suffix = "JT+";
+//             else if (index === 2) suffix = "T+";
+
+//             function UpdateCounter() {
+//                 const targetNumber = +counter.CDATA_SECTION_NODE.target;
+//                 const initialNumber = +counter.innerText.replace(/[^0-9]/g, '');
+//                 const incPerCount = targerNumber / speed; 
+//                 if (initialNumber < targetNumber) {
+//                     counter.innerText = Math.ceil(initialNumber + incPerCount) + suffix;
+//                     setTimeout(UpdateCounter, 40);
+//                 } else {
+//                     counter.innerText = targetNumber.toLocaleString() + suffix;
+//                 }
+//             }
+//             UpdateCounter();
+
+//             //slide anim
+//             if (counter.parentElement.style.animation) {
+//                 counter.parentElement.style.animation = '';
+//             } else {
+//                 counter.parentElement.style.animation = `slide-up 0.3s ease forwards ${
+//                     index / counters,length + 0.5
+//                 }s`;
+//             }
+//         });
+
+//         observer.unobserve(section_counter);
+//     },
+//     {
+//         root: null,
+//         threshold: window.innerWidth > 768 ? 0.4 : 0.3,
+//     }
+// );
+
+// CounterObserver.observe(section_counter);
