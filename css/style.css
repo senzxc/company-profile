@@ -96,6 +96,10 @@ main {
 }
 
 .slide1 nav .wrapper-nav ul li a:hover {
+    opacity: 0.5;
+}
+
+.slide1 nav .wrapper-nav ul li a.active {
     background: var(--black);
     color: var(--white);
     padding: 0.8rem 1.5rem;
@@ -152,6 +156,7 @@ main {
     border-radius: 50px;
     color: #eee;
     font-size: 1.2em;
+    cursor: pointer;
 }
 
 /*---------------------- SLIDE 1 END ----------------------*/
