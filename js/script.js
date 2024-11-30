@@ -120,7 +120,7 @@ document.querySelectorAll(".slide2 .box-wrapper .box h1").forEach((el, index) =>
         { innerText: 0 }, 
         { 
             innerText: targetValue, 
-            duration: 2, 
+            duration: 2.3,
             scrollTrigger: {
                 trigger: ".slide2",
                 start: "top center",
