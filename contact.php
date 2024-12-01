@@ -45,7 +45,7 @@
 
                 <div class="form-group msg">
                     <label for="Pesan">Pesan</label>
-                    <textarea name="message" id="Pesan" placeholder="Ketikkan Pesan Anda" required></textarea>
+                    <textarea name="message" id="Pesan" placeholder="Ketikkan Pesan Anda" required maxlength="150"></textarea>
                 </div>
 
                 <div class="form-btn">
