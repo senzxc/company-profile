@@ -71,7 +71,6 @@ main {
     box-shadow: 0 10px 20px 0 #4444441e;
     background-color: #fff;
     border-radius: 50px;
-    padding-right: 30px;
     gap: 3vw;
     overflow: hidden;
 }
@@ -87,10 +86,13 @@ main {
 .slide1 nav .wrapper-nav ul{
     display: flex;
     list-style: none;
-    gap: 3vw;
+    gap: 1vw;
 }
 
 .slide1 nav .wrapper-nav ul li a {
+    background: var(--white);
+    padding: 0.8rem 1.5rem;
+    border-radius: 50px;
     text-decoration: none;
     font-size: 1.3em;
     color: #333;
