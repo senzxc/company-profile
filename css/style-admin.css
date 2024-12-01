@@ -270,7 +270,6 @@ nav .logout h2 {
     background: var(--white);
     padding: 30px;
     border-radius: 10px;
-    overflow-y: scroll;
 }
 
 .home .recent-users h1 {
@@ -289,6 +288,7 @@ nav .logout h2 {
 .home .recent-users .table-user {
     display: flex;
     flex-direction: column;
+    overflow-y: auto;
 }
 
 .home .recent-users .box-header {
@@ -340,6 +340,7 @@ nav .logout h2 {
 
 .home .recent-messages {
     width: 50%;
+    height: 50vh;
     display: flex;
     flex-direction: column;
     background: var(--white);
@@ -363,6 +364,7 @@ nav .logout h2 {
 .home .recent-messages .table-messages {
     display: flex;
     flex-direction: column;
+    overflow-y: auto;
 }
 
 .home .recent-messages .box-header {
@@ -394,19 +396,20 @@ nav .logout h2 {
     margin-bottom: 30px;
 }
 
-.home .recent-messages .box-message img {
-    width: 50px;
-    border-radius: 50px;
-    margin-right: 2rem;
-}
-
 .home .recent-messages .box-message h3 {
+    width: 30%;
+    display: flex;
+    justify-content: left;
     font-size: 1.2em;
     font-weight: 500;
     margin-left: 2rem;
 }
 
 .home .recent-messages .box-message h5 {
+    width: 70%;
+    display: flex;
+    justify-content: right;
+    text-align: right;
     font-size: 1.2em;
     font-weight: 500;
     margin-left: auto;
@@ -760,74 +763,60 @@ nav .logout h2 {
 }
 
 .messages .recent-messages .table-messages {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    width: 100%;
+    height: 58vh;
+    box-sizing: border-box;
+    padding: 5px;
+    grid-template-columns: 0.5fr 1.5fr 2fr 0.5fr;
+    row-gap: 2rem;
+    text-align: center;
+    overflow-y: auto;
 }
 
-.messages .recent-messages .box-header {
+.messages .recent-messages .table-messages .head {
     display: flex;
+    justify-content: center;
     align-items: center;
-    margin-bottom: 20px;
+    font-size: 1.2em;
+    font-weight: 600;
     border-bottom: 2px solid #b4b4b4;
+    padding-bottom: 10px;
 }
 
-.messages .recent-messages .box-header h2 {
-    font-size: 1.2em;
-    font-weight: 600;
-    margin-bottom: 10px;
-    margin-left: 2rem;
+.messages .recent-messages .table-messages .head1 {
+    justify-content: left;
+    padding-left: 2rem;
 }
 
-.messages .recent-messages .box-header h3 {
-    font-size: 1.2em;
-    font-weight: 600;
-    margin-left: auto;
+.messages .recent-messages .table-messages .head4 {
+    justify-content: right;
+    padding-right: 2rem;
 }
 
-.messages .recent-messages .box-header h4 {
-    font-size: 1.2em;
-    font-weight: 600;
-    margin-left: auto;
-    margin-right: 2rem;
-}
-
-.messages .recent-messages .box-message {
+.messages .recent-messages .table-messages .main {
     display: flex;
+    justify-content: center;
     align-items: center;
-    margin-bottom: 30px;
-}
-
-.messages .recent-messages .box-message img {
-    width: 50px;
-    border-radius: 50px;
-    margin-right: 2rem;
-}
-
-.messages .recent-messages .box-message h3 {
     font-size: 1.2em;
     font-weight: 500;
-    margin-left: 2rem;
+    word-wrap: break-word;
+    white-space: normal;
 }
 
-.messages .recent-messages .box-message h4 {
-    font-size: 1.2em;
-    font-weight: 500;
-    margin-left: auto;
+.messages .recent-messages .table-messages .main1 {
+    justify-content: left;
+    padding-left: 2rem;
 }
 
-.messages .recent-messages .box-message h5 {
-    font-size: 1.2em;
-    font-weight: 500;
-    margin-left: auto;
-    margin-right: 30px;
-    max-width: 20%;
+.messages .recent-messages .table-messages .main4 {
+    justify-content: right;
+    padding-right: 2rem;
 }
 
-.messages .recent-messages .box-message a {
+.messages .recent-messages .table-messages a {
     font-size: 1.2em;
     font-weight: 500;
-    margin-right: 30px;
-    margin-left: auto;
     text-decoration: none;
     color: var(--red);
 }
