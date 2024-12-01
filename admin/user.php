@@ -7,7 +7,7 @@
         exit;
     }
 
-    $sql = "SELECT * FROM user";
+    $sql = "SELECT * FROM user ORDER BY date DESC";
     $all_user = $conn->query($sql);
 ?>
 
@@ -81,22 +81,19 @@
                 }
             ?>
                 <div class="table-user">
-                    <div class="box-header">
-                        <h2>User</h2>
-                        <h3>Create Date</h3>
-                        <h4>Action</h4>
-                    </div>
+                    <h2 class="head head1">&nbsp;</h2>
+                    <h2 class="head head2">User</h2>
+                    <h3 class="head head3">Create Date</h3>
+                    <h4 class="head head4">Action</h4>
 
                     <?php
                         while ($row = mysqli_fetch_assoc($all_user)) {
                     ?>
 
-                    <div class="box-user">
-                        <img src="<?= "../assets/uploads/" . $row['img_profile']; ?>" alt="">
-                        <h3><?= $row['username']; ?></h3>
-                        <h4><?= $row['date']; ?></h4>
-                        <a href="delete.php?type=user&id=<?= $row['id_user']; ?>">Delete</a>
-                    </div>
+                    <img class="main main1" src="<?= "../assets/uploads/" . $row['img_profile']; ?>" alt="">
+                    <h3 class="main main2"><?= $row['username']; ?></h3>
+                    <h4 class="main main3"><?= $row['date']; ?></h4>
+                    <a class="main main4" href="delete.php?type=user&id=<?= $row['id_user']; ?>">Delete</a>
 
                     <?php
                         }

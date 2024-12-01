@@ -7,10 +7,10 @@
         exit;
     }
 
-    $user = "SELECT * FROM user";
+    $user = "SELECT * FROM user ORDER BY date DESC";
     $all_user = $conn->query($user);
 
-    $sql = "SELECT * FROM contact";
+    $sql = "SELECT * FROM contact ORDER BY date DESC";
     $all_msg = $conn->query($sql);
 ?>
 
