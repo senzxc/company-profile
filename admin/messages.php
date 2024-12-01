@@ -7,7 +7,7 @@
         exit;
     }
 
-    $sql = "SELECT * FROM contact";
+    $sql = "SELECT * FROM contact ORDER BY date DESC";
     $all_msg = $conn->query($sql);
 ?>
 
@@ -83,21 +83,19 @@
                     if ($all_msg && $all_msg->num_rows > 0) {
                 ?>
                 <div class="table-messages">
-                    <div class="box-header">
-                        <h2>User</h2>
-                        <h3>Email</h3>
-                        <h4>Message</h4>
-                        <h4>Action</h4>
-                    </div>
+                    <h2 class="head head1">User</h2>
+                    <h3 class="head head2">Email</h3>
+                    <h3 class="head head3">Date</h3>
+                    <h4 class="head head4">Message</h4>
+                    <h4 class="head head5">Action</h4>
                     <?php
                         while ($row = $all_msg->fetch_assoc()) {
                     ?>
-                    <div class="box-message">
-                        <h3><?= $row["name"]; ?></h3>
-                        <h4><?= $row["email"]; ?></h4>
-                        <h5><?= $row["message"]; ?></h5>
-                        <a href="delete.php?type=msg&id=<?= $row['id_contact']; ?>">Delete</a>
-                    </div>
+                    <h3 class="main main1"><?= $row["name"]; ?></h3>
+                    <h4 class="main main2"><?= $row["email"]; ?></h4>
+                    <h4 class="main main3"><?= $row["date"]; ?></h4>
+                    <h5 class="main main4"><?= $row["message"]; ?></h5>
+                    <a class="main main5" href="delete.php?type=msg&id=<?= $row['id_contact']; ?>">Delete</a>
                     <?php
                         }
                     ?>
