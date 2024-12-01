@@ -53,7 +53,7 @@
                 <input type="text" name="username" id="Username" placeholder="Ketikkan Username Anda">
 
                 <label for="Password">Password : </label>
-                <input type="text" name="password" id="Password" placeholder="Ketikkan Password Anda">
+                <input type="password" name="password" id="Password" placeholder="Ketikkan Password Anda">
 
                 <button type="submit" name="login">Login</button>
             </form>
