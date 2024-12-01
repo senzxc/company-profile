@@ -483,6 +483,7 @@ nav .logout h2 {
 }
 
 .users .recent-users .title-user {
+    width: 100%;
     display: flex;
 }
 
@@ -503,64 +504,68 @@ nav .logout h2 {
 }
 
 .users .recent-users .table-user {
-    display: flex;
-    flex-direction: column;
+    width: 100%;
+    height: 58vh;
+    display: grid;
+    box-sizing: border-box;
+    grid-template-columns: 0.13fr 0.5fr 1fr 0.5fr;
+    row-gap: 2rem;
+    padding: 5px;
+    text-align: center;
+    overflow-y: auto;
 }
 
-.users .recent-users .box-header {
+.users .recent-users .table-user .head {
     display: flex;
     align-items: center;
-    margin-bottom: 20px;
     border-bottom: 2px solid #b4b4b4;
-}
-
-.users .recent-users .box-header h2 {
+    padding-bottom: 10px;
     font-size: 1.2em;
     font-weight: 600;
-    margin-bottom: 10px;
-    margin-left: 5rem;
 }
 
-.users .recent-users .box-header h3 {
+.users .recent-users .table-user .head1 {
+    display: flex;
+    justify-content: left;
     font-size: 1.2em;
     font-weight: 600;
-    margin: 0 auto;
 }
 
-.users .recent-users .box-header h4 {
-    font-size: 1.2em;
-    font-weight: 600;
-    margin-right: 2rem;
+.users .recent-users .table-user .head3 {
+    justify-content: center;
 }
 
-.users .recent-users .box-user {
+.users .recent-users .table-user .head4 {
+    justify-content: right;
+    padding-right: 2rem;
+}
+
+.users .recent-users .table-user .main {
     display: flex;
     align-items: center;
-    margin-bottom: 30px;
-}
-
-.users .recent-users .box-user img {
-    width: 50px;
-    border-radius: 50px;
-    margin-right: 2rem;
-}
-
-.users .recent-users .box-user h3 {
     font-size: 1.2em;
     font-weight: 500;
     text-transform: capitalize;
 }
 
-.users .recent-users .box-user h4 {
-    font-size: 1.2em;
-    font-weight: 500;
-    margin: 0 auto;
+.users .recent-users .table-user .main1 {
+    width: 50px;
+    border-radius: 50px;
+    align-self: center;
 }
 
-.users .recent-users .box-user a {
+.users .recent-users .table-user .main3 {
+    justify-content: center;
+}
+
+.users .recent-users .table-user .main4 {
+    justify-content: right;
+    padding-right: 2rem;
+}
+
+.users .recent-users a {
     font-size: 1.2em;
     font-weight: 500;
-    margin-right: 30px;
     text-decoration: none;
     color: var(--red);
 }
@@ -768,7 +773,7 @@ nav .logout h2 {
     height: 58vh;
     box-sizing: border-box;
     padding: 5px;
-    grid-template-columns: 0.5fr 1.5fr 2fr 0.5fr;
+    grid-template-columns: 0.5fr 1.5fr 0.5fr 2fr 0.5fr;
     row-gap: 2rem;
     text-align: center;
     overflow-y: auto;
@@ -781,7 +786,7 @@ nav .logout h2 {
     font-size: 1.2em;
     font-weight: 600;
     border-bottom: 2px solid #b4b4b4;
-    padding-bottom: 10px;
+    padding-bottom: 5px;
 }
 
 .messages .recent-messages .table-messages .head1 {
@@ -790,6 +795,10 @@ nav .logout h2 {
 }
 
 .messages .recent-messages .table-messages .head4 {
+    justify-content: center;
+}
+
+.messages .recent-messages .table-messages .head5 {
     justify-content: right;
     padding-right: 2rem;
 }
@@ -810,6 +819,10 @@ nav .logout h2 {
 }
 
 .messages .recent-messages .table-messages .main4 {
+    justify-content: center;
+}
+
+.messages .recent-messages .table-messages .main5 {
     justify-content: right;
     padding-right: 2rem;
 }
