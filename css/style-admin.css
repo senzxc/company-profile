@@ -264,11 +264,13 @@ nav .logout h2 {
 
 .home .recent-users {
     width: 50%;
+    height: 50vh;
     display: flex;
     flex-direction: column;
     background: var(--white);
     padding: 30px;
     border-radius: 10px;
+    overflow-y: scroll;
 }
 
 .home .recent-users h1 {
