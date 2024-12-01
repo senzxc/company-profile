@@ -265,7 +265,7 @@ main {
     border-radius: 20px;
     overflow: hidden;
     box-sizing: border-box;
-    flex: 0 1 calc(44.444% - 40px);
+    flex: 1 1 calc(44.444% - 40px);
     box-shadow: 0 10px 10px 0 #33333318;
 }
 
@@ -569,7 +569,8 @@ main {
     margin-bottom: 5px;
 }
 
-.login section form input[type=text] {
+.login section form input[type=text],
+input[type=password] {
     outline: none;
     border: none;
     width: 300px;
