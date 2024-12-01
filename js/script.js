@@ -7,39 +7,38 @@ ScrollTrigger.defaults({
     snap: 1
 });
 
-// Highlight active link based on scroll position
+// sorot link aktif berdasarkan posisi scroll
 let sections = document.querySelectorAll('section');
 let navLinks = document.querySelectorAll('.wrapper-nav a');
 
-// Loop melalui setiap section
+// loop melalui setiap section
 sections.forEach(section => {
     ScrollTrigger.create({
         trigger: section,
-        start: "top center", // Trigger saat section berada di tengah viewport
+        start: "top center", // trigger saat section berada di tengah viewport
         end: "bottom center",
         onEnter: () => setActiveLink(section.id),
         onEnterBack: () => setActiveLink(section.id),
     });
 });
 
-// Fungsi untuk menambahkan kelas "active" pada link
+// fungsi untuk menambahkan kelas "active" pada link
 function setActiveLink(id) {
     navLinks.forEach(link => link.classList.remove('active'));
     let activeLink = document.querySelector(`.wrapper-nav a[href="#${id}"]`);
     if (activeLink) activeLink.classList.add('active');
 }
 
-// Smooth scroll untuk anchor links
+// smooth scroll untuk anchor links
 navLinks.forEach(link => {
     link.addEventListener('click', (e) => {
-        e.preventDefault(); // Mencegah perilaku default anchor link
         let targetId = link.getAttribute('href').substring(1); // Ambil ID target
         let targetSection = document.getElementById(targetId);
 
         if (targetSection) {
             gsap.to(window, {
                 scrollTo: { y: targetSection.offsetTop, autoKill: false },
-                duration: 1, // Durasi animasi
+                duration: 1,
                 ease: "power2.out",
             });
         }
