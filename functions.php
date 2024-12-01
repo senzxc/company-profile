@@ -8,7 +8,7 @@
         $email = htmlspecialchars($data["email"]);
         $message = htmlspecialchars($data["message"]);
 
-        mysqli_query($conn, "INSERT INTO contact VALUES('', '$name', '$email', '$message')");
+        mysqli_query($conn, "INSERT INTO contact VALUES('', '$name', '$email', '$message', NOW())");
 
         return mysqli_affected_rows($conn);
     }
