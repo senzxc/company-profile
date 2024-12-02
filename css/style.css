@@ -59,7 +59,7 @@ main {
     box-shadow: 0 10px 20px 0 #4444441e;
     background-color: #fff;
     border-radius: 50px;
-    gap: 3vw;
+    gap: 2vw;
     overflow: hidden;
 }
 
@@ -94,10 +94,16 @@ main {
 }
 
 .slide1 nav .wrapper-nav ul li a.active {
-    background: var(--black);
-    color: var(--white);
-    padding: 0.8rem 1.5rem;
-    border-radius: 50px;
+    position: relative;
+}
+
+.slide1 nav a.active::after {
+    content: '';
+    position: absolute;
+    bottom: 1px;
+    left: 0;
+    border-bottom: 5px solid var(--black);
+    width: 100%;
 }
 
 .slide1 nav .wrapper-nav2 {
@@ -118,10 +124,12 @@ main {
     box-shadow: 0 10px 20px 0 #44444428;
     color: #fff;
     transition: 0.3s ease;
+    overflow: hidden;
 }
 
 .slide1 nav .wrapper-nav2 a:hover {
     opacity: 0.5;
+    overflow: hidden;
 }
 
 .slide1 article {
@@ -607,6 +615,10 @@ input[type=password] {
 
 @media screen and (max-width: 700px) {
     .slide1 nav {
+        display: none;
+    }
+
+    /* .slide1 nav {
         width: auto;
     }
 
@@ -647,13 +659,15 @@ input[type=password] {
         width: 30px;
     }
 
+    
     .slide1 nav .wrapper-nav span {
         display: none;
     }
-
+    
     .slide1 nav .wrapper-nav2 {
         display: none;
-    }
+    } */
+    /*-----FIX THISSS NAVBARR ^^^^ ----*/
 
     .slide1 article h1 {
         font-size: 2em;
