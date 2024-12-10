@@ -8,7 +8,13 @@
         $email = htmlspecialchars($data["email"]);
         $message = htmlspecialchars($data["message"]);
 
-        mysqli_query($conn, "INSERT INTO contact VALUES('', '$name', '$email', '$message', NOW())");
+        // Ambil ID terakhir dari tabel
+        $result = mysqli_query($conn, "SELECT id_contact FROM contact ORDER BY id_contact DESC LIMIT 1");
+        $row = mysqli_fetch_assoc($result);
+        $lastId = isset($row['id_contact']) ? intval($row['id_contact']) : 0; // Default ke 0 jika tabel kosong
+        $newId = $lastId + 1;
+
+        mysqli_query($conn, "INSERT INTO contact VALUES('$newId', '$name', '$email', '$message', NOW())");
 
         return mysqli_affected_rows($conn);
     }
@@ -43,7 +49,13 @@
 
         $password = password_hash($password, PASSWORD_DEFAULT);
 
-        mysqli_query($conn, "INSERT INTO user VALUES ('', '$username', '$password', NOW(), '$img')");
+        // Ambil ID terakhir dari tabel
+        $result = mysqli_query($conn, "SELECT id_user FROM user ORDER BY id_user DESC LIMIT 1");
+        $row = mysqli_fetch_assoc($result);
+        $lastId = isset($row['id_user']) ? intval($row['id_user']) : 0; // Default ke 0 jika tabel kosong
+        $newId = $lastId + 1;
+
+        mysqli_query($conn, "INSERT INTO user VALUES ('$newId', '$username', '$password', NOW(), '$img')");
 
         return mysqli_affected_rows($conn);
     }
@@ -108,7 +120,13 @@
             return false;
         } 
 
-        mysqli_query($conn, "INSERT INTO gallery VALUES ('', '$img', NOW(), '$desc')");
+        // Ambil ID terakhir dari tabel
+        $result = mysqli_query($conn, "SELECT id_gallery FROM gallery ORDER BY id_gallery DESC LIMIT 1");
+        $row = mysqli_fetch_assoc($result);
+        $lastId = isset($row['id_gallery']) ? intval($row['id_gallery']) : 0; // Default ke 0 jika tabel kosong
+        $newId = $lastId + 1;
+
+        mysqli_query($conn, "INSERT INTO gallery VALUES ('$newId', '$img', NOW(), '$desc')");
         return mysqli_affected_rows($conn);
     }
 ?>
