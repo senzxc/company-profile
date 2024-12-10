@@ -7,7 +7,7 @@
         exit;
     }
 
-    $sql = "SELECT * FROM contact ORDER BY date DESC";
+    $sql = "SELECT * FROM contact ORDER BY id_contact DESC";
     $all_msg = $conn->query($sql);
 ?>
 
