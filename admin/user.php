@@ -7,7 +7,7 @@
         exit;
     }
 
-    $sql = "SELECT * FROM user ORDER BY date DESC";
+    $sql = "SELECT * FROM user ORDER BY id_user DESC";
     $all_user = $conn->query($sql);
 ?>
 
