@@ -8,18 +8,18 @@
         if ($type === 'user') {
             $result = deleteUser($id);
             $redirect = 'user.php';
-            $successMsg = 'User deleted successfully';
-            $failedMsg = 'User failed to delete';
+            $successMsg = 'Berhasil menghapus User';
+            $failedMsg = 'Gagal menghapus User';
         } elseif ($type === 'gallery') {
             $result = deleteGallery($id);
             $redirect = 'galleries.php';
-            $successMsg = 'Image deleted successfully';
-            $failedMsg = 'Image failed to delete';
+            $successMsg = 'Berhasil menghapus gambar';
+            $failedMsg = 'Gagal menghapus gambar';
         } elseif ($type === 'msg'){
             $result = deleteMsg($id);
             $redirect = 'messages.php';
-            $successMsg = 'Message deleted successfully';
-            $failedMsg = 'Message failed to delete';
+            $successMsg = 'Berhasil menghapus pesan';
+            $failedMsg = 'Gagal menghapus pesan';
         } else {
             echo "<script>
                     alert('Invalid type specified.');
