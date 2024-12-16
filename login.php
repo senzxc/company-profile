@@ -3,7 +3,11 @@
     require 'functions.php';
 
     if (isset($_SESSION["login"])) {
-        header("Location: admin/index.php");
+        if ($_SESSION["role"] === 'admin-master') {
+            header("Location: admin/index.php");
+        } else {
+            header("Location: admin/staff/index.php");
+        }
         exit;
     }
 
@@ -20,8 +24,14 @@
                 $_SESSION["login"] = true;
                 $_SESSION["name"] = $_POST['username'];
                 $_SESSION["profile"] = "../assets/uploads/" . $row['img_profile'];
+                $_SESSION["profile2"] = "../../assets/uploads/" . $row['img_profile'];
+                $_SESSION["role"] = $row['role'];
 
-                header("Location: admin/index.php");
+                if ($row["role"] === 'admin-master') {
+                    header("Location: admin/index.php");
+                } else {
+                    header("Location: admin/staff/index.php");
+                }
                 exit;
             }
             $error = true;
