@@ -88,6 +88,34 @@
         return $newFileName;
     }
 
+    function uploadProfile2() {
+        $fileName = $_FILES['img']['name'];
+        $fileSize = $_FILES['img']['size'];
+        $tmpName = $_FILES['img']['tmp_name'];
+
+        $validImgExtension = ['jpg', 'jpeg', 'png'];
+        $imgExtension = strtolower(pathinfo($fileName, PATHINFO_EXTENSION));
+        if (!in_array($imgExtension, $validImgExtension)) {
+            echo "<script>
+                    alert('File yang diunggah bukan gambar!');
+                </script>";
+                return false;
+        }
+
+        if ($fileSize > 2000000) {
+            echo "<script>
+                    alert('Ukuran file terlalu besar!');
+                </script>";
+                return false;
+        }
+
+        $newFileName = uniqid() . '.' . $imgExtension;
+
+        move_uploaded_file($tmpName, '../../assets/uploads/' . $newFileName);
+
+        return $newFileName;
+    }
+
     function deleteUser($id_user) {
         global $conn;
 
@@ -116,6 +144,26 @@
         $desc = $data['description'];
 
         $img = uploadProfile();
+        if (!$img) {
+            return false;
+        } 
+
+        // Ambil ID terakhir dari tabel
+        $result = mysqli_query($conn, "SELECT id_gallery FROM gallery ORDER BY id_gallery DESC LIMIT 1");
+        $row = mysqli_fetch_assoc($result);
+        $lastId = isset($row['id_gallery']) ? intval($row['id_gallery']) : 0; // Default ke 0 jika tabel kosong
+        $newId = $lastId + 1;
+
+        mysqli_query($conn, "INSERT INTO gallery VALUES ('$newId', '$img', NOW(), '$desc')");
+        return mysqli_affected_rows($conn);
+    }
+
+    function add_img2($data) {
+        global $conn;
+
+        $desc = $data['description'];
+
+        $img = uploadProfile2();
         if (!$img) {
             return false;
         } 
