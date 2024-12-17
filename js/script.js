@@ -46,16 +46,23 @@ navLinks.forEach(link => {
 });
 
 
+gsap.from(".wrapper-nav1", {
+    y: -100,
+    duration: 2,
+    ease: "elastic"
+})
+
 gsap.from(".wrapper-nav", {
     y: -100,
     duration: 2,
+    delay: 0.15,
     ease: "elastic"
 })
 
 gsap.from(".wrapper-nav2", {
     y: -100,
     duration: 2,
-    delay: 0.2,
+    delay: 0.3,
     ease: "elastic"
 })
 
