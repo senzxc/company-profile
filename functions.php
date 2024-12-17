@@ -25,6 +25,7 @@
         $username = strtolower(stripslashes($data['username']));
         $password =  mysqli_real_escape_string($conn ,$data['password']);
         $password2 = mysqli_real_escape_string($conn ,$data['password2']);
+        $role = 'staff';
 
         $result = mysqli_query($conn, "SELECT username FROM  user WHERE username = '$username'");
 
@@ -55,7 +56,7 @@
         $lastId = isset($row['id_user']) ? intval($row['id_user']) : 0; // Default ke 0 jika tabel kosong
         $newId = $lastId + 1;
 
-        mysqli_query($conn, "INSERT INTO user VALUES ('$newId', '$username', '$password', NOW(), '$img')");
+        mysqli_query($conn, "INSERT INTO user VALUES ('$newId', '$username', '$password', NOW(), '$img', '$role')");
 
         return mysqli_affected_rows($conn);
     }
@@ -142,6 +143,7 @@
         global $conn;
 
         $desc = $data['description'];
+        $addedBy = $_SESSION['name'];
 
         $img = uploadProfile();
         if (!$img) {
@@ -154,7 +156,7 @@
         $lastId = isset($row['id_gallery']) ? intval($row['id_gallery']) : 0; // Default ke 0 jika tabel kosong
         $newId = $lastId + 1;
 
-        mysqli_query($conn, "INSERT INTO gallery VALUES ('$newId', '$img', NOW(), '$desc')");
+        mysqli_query($conn, "INSERT INTO gallery VALUES ('$newId', '$img', NOW(), '$desc', '$addedBy')");
         return mysqli_affected_rows($conn);
     }
 
@@ -162,6 +164,7 @@
         global $conn;
 
         $desc = $data['description'];
+        $addedBy = $_SESSION['name'];
 
         $img = uploadProfile2();
         if (!$img) {
@@ -174,7 +177,7 @@
         $lastId = isset($row['id_gallery']) ? intval($row['id_gallery']) : 0; // Default ke 0 jika tabel kosong
         $newId = $lastId + 1;
 
-        mysqli_query($conn, "INSERT INTO gallery VALUES ('$newId', '$img', NOW(), '$desc')");
+        mysqli_query($conn, "INSERT INTO gallery VALUES ('$newId', '$img', NOW(), '$desc', '$addedBy')");
         return mysqli_affected_rows($conn);
     }
 ?>
