@@ -508,7 +508,7 @@ nav .logout h2 {
     height: 58vh;
     display: grid;
     box-sizing: border-box;
-    grid-template-columns: 0.13fr 0.5fr 1fr 0.5fr;
+    grid-template-columns: 0.08fr 0.2fr 0.5fr 0.5fr 0.2fr;
     row-gap: 2rem;
     padding: 5px;
     text-align: center;
@@ -536,6 +536,10 @@ nav .logout h2 {
 }
 
 .users .recent-users .table-user .head4 {
+    justify-content: center;
+}
+
+.users .recent-users .table-user .head5 {
     justify-content: right;
     padding-right: 2rem;
 }
@@ -559,6 +563,10 @@ nav .logout h2 {
 }
 
 .users .recent-users .table-user .main4 {
+    justify-content: center;
+}
+
+.users .recent-users .table-user .main5 {
     justify-content: right;
     padding-right: 2rem;
 }
@@ -686,6 +694,20 @@ nav .logout h2 {
     background-color: #fff;
     padding: 5px 20px;
     border-radius: 20px 20px 0 0;
+}
+
+.galleries .galleries-wrapper .galleries-box .galleries-header .galleries-user-add {
+    position: absolute;
+    bottom: 0;
+    right: 30px;
+    background-color: #fff;
+    padding: 5px 20px;
+    border-radius: 20px 20px 0 0;
+}
+
+.galleries .galleries-wrapper .galleries-box .galleries-header .galleries-user-add span {
+    color: var(--blue);
+    text-transform: capitalize;
 }
 
 .galleries .galleries-wrapper .galleries-box .galleries-header .galleries-delete {
