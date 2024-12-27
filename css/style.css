@@ -17,11 +17,11 @@
 body {
     /* background: linear-gradient(35deg, #fcfdee, #c5bddf); */
     --_mesh-gradient-blur: 0px;
---_mesh-gradient-blend-mode: normal;
+    --_mesh-gradient-blend-mode: normal;
 
-background: radial-gradient(at 99.4628269174258% 63.69770580296896%, #fecdfc 0px, transparent 50%), radial-gradient(at 73.13311783720246% 36.707152496626186%, #47fcff 0px, transparent 50%), radial-gradient(at 38.00176315016162% 58.43454790823211%, #b8faff 0px, transparent 50%) #eee;
-mix-blend-mode: var(--_mesh-gradient-blend-mode);
-filter: blur(var(--_mesh-gradient-blur));
+    background: radial-gradient(at 99.4628269174258% 63.69770580296896%, #fecdfc 0px, transparent 50%), radial-gradient(at 73.13311783720246% 36.707152496626186%, #47fcff 0px, transparent 50%), radial-gradient(at 38.00176315016162% 58.43454790823211%, #b8faff 0px, transparent 50%) #eee;
+    mix-blend-mode: var(--_mesh-gradient-blend-mode);
+    filter: blur(var(--_mesh-gradient-blur));
     overflow: hidden;
 }
 
@@ -55,6 +55,16 @@ main {
     margin-top: 10px;
     z-index: 1;
     gap: 1vw;
+}
+
+.slide1 nav .wrapper-nav1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slide1 nav .wrapper-nav1 img {
+    width: 100px;
 }
 
 .slide1 nav .wrapper-nav {
