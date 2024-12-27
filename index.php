@@ -18,8 +18,10 @@
     <main>
         <section class="slides slide1" id="home">
             <nav>
+                <div class="wrapper-nav1">
+                    <img src="assets/logo.png" alt="">
+                </div>
                 <div class="wrapper-nav">
-                    <h2>Ford</h2>
                     <ul>
                         <li><a href="#home" class="active"><span>Home</span></a></li>
                         <li><a href="#about"><span>About</span></a></li>

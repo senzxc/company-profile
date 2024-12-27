@@ -2,7 +2,7 @@
     session_start();
     require '../functions.php';
 
-    if (!isset($_SESSION["login"])) {
+    if (!isset($_SESSION["login"]) || $_SESSION['role'] !== 'admin-master') {
         header("Location: ../login.php");
         exit;
     }
@@ -16,7 +16,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin</title>
+    <title>Admin Master Page</title>
     <link rel="stylesheet" href="../css/style-admin.css">
 </head>
 <body>
@@ -83,8 +83,9 @@
                 <div class="table-user">
                     <h2 class="head head1">&nbsp;</h2>
                     <h2 class="head head2">User</h2>
-                    <h3 class="head head3">Create Date</h3>
-                    <h4 class="head head4">Action</h4>
+                    <h5 class="head head3">Role</h5>
+                    <h3 class="head head4">Create Date</h3>
+                    <h4 class="head head5">Action</h4>
 
                     <?php
                         while ($row = mysqli_fetch_assoc($all_user)) {
@@ -92,8 +93,9 @@
 
                     <img class="main main1" src="<?= "../assets/uploads/" . $row['img_profile']; ?>" alt="">
                     <h3 class="main main2"><?= $row['username']; ?></h3>
-                    <h4 class="main main3"><?= $row['date']; ?></h4>
-                    <a class="main main4" href="delete.php?type=user&id=<?= $row['id_user']; ?>">Delete</a>
+                    <h5 class="main main3"><?= $row['role']; ?></h5>
+                    <h4 class="main main4"><?= $row['date']; ?></h4>
+                    <a class="main main5" href="delete.php?type=user&id=<?= $row['id_user']; ?>">Delete</a>
 
                     <?php
                         }

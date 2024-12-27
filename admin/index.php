@@ -2,7 +2,7 @@
     session_start();
     require '../functions.php';
 
-    if (!isset($_SESSION["login"])) {
+    if (!isset($_SESSION["login"]) || $_SESSION["role"] !== 'admin-master') {
         header("Location: ../login.php");
         exit;
     }
@@ -19,7 +19,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin</title>
+    <title>Admin Master Page</title>
     <link rel="stylesheet" href="../css/style-admin.css">
 </head>
 <body>

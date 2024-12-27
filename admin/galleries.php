@@ -2,7 +2,7 @@
     session_start();
     require '../functions.php';
 
-    if (!isset($_SESSION["login"])) {
+    if (!isset($_SESSION["login"]) || $_SESSION['role'] !== 'admin-master') {
         header("Location: ../login.php");
         exit;
     }
@@ -16,7 +16,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin</title>
+    <title>Admin Master Page</title>
     <link rel="stylesheet" href="../css/style-admin.css">
 </head>
 <body>
@@ -95,6 +95,10 @@
 
                         <div class="galleries-date">
                             <p><?= $row["date"]; ?></p>
+                        </div>
+
+                        <div class="galleries-user-add">
+                            <p>Added by: &nbsp; <span> <?= $row['added_by']; ?></span></p>
                         </div>
 
                         <a href="delete.php?type=gallery&id=<?= $row['id_gallery']; ?>" class="galleries-delete">

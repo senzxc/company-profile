@@ -1,5 +1,11 @@
 <?php
+    session_start();
     require '../functions.php';
+
+    if (!isset($_SESSION["login"]) || $_SESSION['role'] !== 'admin-master') {
+        header("Location: ../login.php");
+        exit;
+    }
 
     if (isset($_POST["addimg"])) {
         if (add_img($_POST) > 0) {
